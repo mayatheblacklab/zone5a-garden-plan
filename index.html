@@ -360,131 +360,136 @@
 
     <div class="bed-map-wrap">
       <div class="map-label map-label-house">House / Foundation &mdash; back edge 21.3 m &mdash; arborvitae backdrop (existing)</div>
-      <svg class="bed-svg" viewBox="0 0 700 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Top-down planting plan for a trapezoidal front-yard garden bed">
+      <svg class="bed-svg" viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Top-down planting plan — trapezoidal front-yard bed, 21.3 m back, 10.0 m front, 7.4 m deep">
 
         <!-- Canvas background -->
-        <rect width="700" height="560" fill="#eae7e0"/>
+        <rect width="700" height="420" fill="#eae7e0"/>
 
-        <!-- Bed mulch fill -->
-        <polygon points="30,30 668,30 330,528 30,528" fill="#6b3d14" opacity="0.16"/>
-        <!-- Bed border -->
-        <polygon points="30,30 668,30 330,528 30,528" fill="none" stroke="#6b3d14" stroke-width="2.5"/>
+        <!-- Bed mulch fill: back 21.3 m (596 px), front 10.0 m (280 px), depth 7.36 m (309 px) -->
+        <!-- Scale: 28 px/m horizontal, 42 px/m vertical -->
+        <!-- Polygon: back-left(52,40) back-right(648,40) front-right(332,349) front-left(52,349) -->
+        <!-- Right edge formula: x_right = 648 − 1.0227×(y−40) -->
+        <polygon points="52,40 648,40 332,349 52,349" fill="#6b3d14" opacity="0.15"/>
+        <polygon points="52,40 648,40 332,349 52,349" fill="none" stroke="#6b3d14" stroke-width="2.5"/>
 
         <!-- Zone dividers (dashed) -->
-        <!-- y=180: x_right = 668 - 0.6787*150 = 668-101.8 = 566 -->
-        <line x1="30" y1="180" x2="566" y2="180" stroke="#c4a96d" stroke-width="1" stroke-dasharray="5,4" opacity="0.55"/>
-        <!-- y=360: x_right = 668 - 0.6787*330 = 668-224 = 444 -->
-        <line x1="30" y1="360" x2="444" y2="360" stroke="#c4a96d" stroke-width="1" stroke-dasharray="5,4" opacity="0.55"/>
+        <!-- Back/middle at y=163: x_right = 648−1.0227×123 = 522 -->
+        <line x1="52" y1="163" x2="522" y2="163" stroke="#c4a96d" stroke-width="1" stroke-dasharray="5,4" opacity="0.55"/>
+        <!-- Middle/front at y=263: x_right = 648−1.0227×223 = 420 -->
+        <line x1="52" y1="263" x2="420" y2="263" stroke="#c4a96d" stroke-width="1" stroke-dasharray="5,4" opacity="0.55"/>
 
-        <!-- Zone watermark labels -->
-        <text x="44" y="155" font-size="10" font-family="Arial,sans-serif" fill="#8B6914" opacity="0.45" font-style="italic" letter-spacing="1">BACK 18–30"</text>
-        <text x="44" y="310" font-size="10" font-family="Arial,sans-serif" fill="#8B6914" opacity="0.45" font-style="italic" letter-spacing="1">MIDDLE 12–18"</text>
-        <text x="44" y="490" font-size="10" font-family="Arial,sans-serif" fill="#8B6914" opacity="0.45" font-style="italic" letter-spacing="1">FRONT 6–12"</text>
+        <!-- Zone watermarks -->
+        <text x="58" y="130" font-size="10" font-family="Arial,sans-serif" fill="#8B6914" opacity="0.45" font-style="italic">BACK  18–30"</text>
+        <text x="58" y="240" font-size="10" font-family="Arial,sans-serif" fill="#8B6914" opacity="0.45" font-style="italic">MIDDLE  12–18"</text>
+        <text x="58" y="345" font-size="10" font-family="Arial,sans-serif" fill="#8B6914" opacity="0.45" font-style="italic">FRONT  6–12"</text>
 
-        <!-- Arborvitae silhouettes along house edge -->
+        <!-- Arborvitae silhouettes (base y=40, peak y=12, 10 trees) -->
         <g fill="#2d5016" opacity="0.6">
-          <polygon points="48,30 62,4 76,30"/>
-          <polygon points="112,30 126,4 140,30"/>
-          <polygon points="176,30 190,4 204,30"/>
-          <polygon points="240,30 254,4 268,30"/>
-          <polygon points="304,30 318,4 332,30"/>
-          <polygon points="368,30 382,4 396,30"/>
-          <polygon points="432,30 446,4 460,30"/>
-          <polygon points="496,30 510,4 524,30"/>
-          <polygon points="560,30 574,4 588,30"/>
-          <polygon points="624,30 638,4 652,30"/>
+          <polygon points="58,40 80,12 102,40"/>
+          <polygon points="117,40 139,12 161,40"/>
+          <polygon points="176,40 198,12 220,40"/>
+          <polygon points="235,40 257,12 279,40"/>
+          <polygon points="294,40 316,12 338,40"/>
+          <polygon points="353,40 375,12 397,40"/>
+          <polygon points="412,40 434,12 456,40"/>
+          <polygon points="471,40 493,12 515,40"/>
+          <polygon points="530,40 552,12 574,40"/>
+          <polygon points="589,40 611,12 633,40"/>
         </g>
 
-        <!-- Dimension labels -->
-        <text x="349" y="21" text-anchor="middle" font-size="9.5" font-family="Arial,sans-serif" fill="#7a5c2e">21.3 m</text>
-        <text x="185" y="546" text-anchor="middle" font-size="9.5" font-family="Arial,sans-serif" fill="#7a5c2e">10.0 m</text>
+        <!-- Dimension callouts -->
+        <text x="350" y="30" text-anchor="middle" font-size="9.5" font-family="Arial,sans-serif" fill="#7a5c2e">← 21.3 m →</text>
+        <text x="192" y="367" text-anchor="middle" font-size="9.5" font-family="Arial,sans-serif" fill="#7a5c2e">← 10.0 m →</text>
+        <!-- Left-side depth bracket -->
+        <line x1="38" y1="40" x2="38" y2="349" stroke="#b8913a" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+        <text x="20" y="200" text-anchor="middle" font-size="9" font-family="Arial,sans-serif" fill="#b8913a" opacity="0.7" transform="rotate(-90,20,200)">7.4 m</text>
 
-        <!-- ============ BACK ZONE plants ============ -->
-        <!-- A: Potentilla #4a6820 — corners, yellow-green anchor -->
-        <circle cx="70" cy="100" r="15" fill="#4a6820" stroke="#fff" stroke-width="1.8"/>
-        <text x="70" y="105" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">A</text>
-        <circle cx="600" cy="105" r="15" fill="#4a6820" stroke="#fff" stroke-width="1.8"/>
-        <text x="600" y="110" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">A</text>
+        <!-- ======== BACK ZONE (y 78–115, verified inside polygon) ======== -->
+        <!-- A: Potentilla — corner anchors -->
+        <circle cx="70"  cy="95" r="15" fill="#4a6820" stroke="#fff" stroke-width="1.8"/>
+        <text x="70"  y="100" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">A</text>
+        <circle cx="568" cy="95" r="15" fill="#4a6820" stroke="#fff" stroke-width="1.8"/>
+        <text x="568" y="100" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">A</text>
 
-        <!-- B: Catmint #5a4080 — purple mass across back -->
-        <circle cx="135" cy="85" r="15" fill="#5a4080" stroke="#fff" stroke-width="1.8"/>
-        <text x="135" y="90" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">B</text>
-        <circle cx="205" cy="112" r="15" fill="#5a4080" stroke="#fff" stroke-width="1.8"/>
-        <text x="205" y="117" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">B</text>
-        <circle cx="345" cy="100" r="15" fill="#5a4080" stroke="#fff" stroke-width="1.8"/>
-        <text x="345" y="105" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">B</text>
+        <!-- B: Catmint — purple mass -->
+        <circle cx="130" cy="80" r="15" fill="#5a4080" stroke="#fff" stroke-width="1.8"/>
+        <text x="130" y="85"  text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">B</text>
+        <circle cx="265" cy="80" r="15" fill="#5a4080" stroke="#fff" stroke-width="1.8"/>
+        <text x="265" y="85"  text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">B</text>
+        <circle cx="400" cy="80" r="15" fill="#5a4080" stroke="#fff" stroke-width="1.8"/>
+        <text x="400" y="85"  text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">B</text>
 
-        <!-- D: Echinacea #884068 — mauve-pink punctuation -->
-        <circle cx="275" cy="86" r="15" fill="#884068" stroke="#fff" stroke-width="1.8"/>
-        <text x="275" y="91" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">D</text>
-        <circle cx="480" cy="112" r="15" fill="#884068" stroke="#fff" stroke-width="1.8"/>
-        <text x="480" y="117" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">D</text>
+        <!-- D: Echinacea — mauve-pink -->
+        <circle cx="200" cy="98" r="15" fill="#884068" stroke="#fff" stroke-width="1.8"/>
+        <text x="200" y="103" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">D</text>
+        <circle cx="460" cy="98" r="15" fill="#884068" stroke="#fff" stroke-width="1.8"/>
+        <text x="460" y="103" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">D</text>
 
-        <!-- C: Sedum Autumn Joy #7a3a18 — earthy fall anchor -->
-        <circle cx="415" cy="86" r="15" fill="#7a3a18" stroke="#fff" stroke-width="1.8"/>
-        <text x="415" y="91" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">C</text>
-        <circle cx="545" cy="86" r="15" fill="#7a3a18" stroke="#fff" stroke-width="1.8"/>
-        <text x="545" y="91" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">C</text>
+        <!-- C: Sedum Autumn Joy — earthy copper -->
+        <circle cx="335" cy="95" r="15" fill="#7a3a18" stroke="#fff" stroke-width="1.8"/>
+        <text x="335" y="100" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">C</text>
+        <circle cx="520" cy="80" r="15" fill="#7a3a18" stroke="#fff" stroke-width="1.8"/>
+        <text x="520" y="85"  text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">C</text>
 
-        <!-- ============ MIDDLE ZONE plants ============ -->
-        <!-- E: Russian Sage #284a80 — left punctuation, silvery-blue -->
-        <circle cx="70" cy="242" r="15" fill="#284a80" stroke="#fff" stroke-width="1.8"/>
-        <text x="70" y="247" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">E</text>
+        <!-- ======== MIDDLE ZONE (y 188–225, verified inside polygon) ======== -->
+        <!-- E: Russian Sage — silvery-blue left accent -->
+        <circle cx="70"  cy="200" r="15" fill="#284a80" stroke="#fff" stroke-width="1.8"/>
+        <text x="70"  y="205" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">E</text>
 
-        <!-- F: Salvia #283878 — purple spikes, alternating mass -->
-        <circle cx="130" cy="226" r="15" fill="#283878" stroke="#fff" stroke-width="1.8"/>
-        <text x="130" y="231" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">F</text>
-        <circle cx="315" cy="247" r="15" fill="#283878" stroke="#fff" stroke-width="1.8"/>
-        <text x="315" y="252" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">F</text>
-        <circle cx="475" cy="226" r="15" fill="#283878" stroke="#fff" stroke-width="1.8"/>
-        <text x="475" y="231" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">F</text>
+        <!-- F: Salvia — purple spikes -->
+        <circle cx="122" cy="188" r="15" fill="#283878" stroke="#fff" stroke-width="1.8"/>
+        <text x="122" y="193" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">F</text>
+        <circle cx="290" cy="208" r="15" fill="#283878" stroke="#fff" stroke-width="1.8"/>
+        <text x="290" y="213" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">F</text>
+        <circle cx="434" cy="188" r="15" fill="#283878" stroke="#fff" stroke-width="1.8"/>
+        <text x="434" y="193" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">F</text>
 
-        <!-- G: Yarrow #786018 — yellow plates, textural contrast -->
-        <circle cx="195" cy="247" r="15" fill="#786018" stroke="#fff" stroke-width="1.8"/>
-        <text x="195" y="252" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">G</text>
-        <circle cx="430" cy="247" r="15" fill="#786018" stroke="#fff" stroke-width="1.8"/>
-        <text x="430" y="252" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">G</text>
+        <!-- G: Yarrow — yellow plates -->
+        <circle cx="178" cy="208" r="15" fill="#786018" stroke="#fff" stroke-width="1.8"/>
+        <text x="178" y="213" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">G</text>
+        <circle cx="394" cy="208" r="15" fill="#786018" stroke="#fff" stroke-width="1.8"/>
+        <text x="394" y="213" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">G</text>
 
-        <!-- H: Allium Millenium #583870 — deer-deterrent globes -->
-        <circle cx="255" cy="226" r="15" fill="#583870" stroke="#fff" stroke-width="1.8"/>
-        <text x="255" y="231" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">H</text>
-        <circle cx="375" cy="226" r="15" fill="#583870" stroke="#fff" stroke-width="1.8"/>
-        <text x="375" y="231" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">H</text>
-        <circle cx="510" cy="247" r="15" fill="#583870" stroke="#fff" stroke-width="1.8"/>
-        <text x="510" y="252" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">H</text>
+        <!-- H: Allium — deer-deterrent globes -->
+        <circle cx="234" cy="188" r="15" fill="#583870" stroke="#fff" stroke-width="1.8"/>
+        <text x="234" y="193" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">H</text>
+        <circle cx="344" cy="188" r="15" fill="#583870" stroke="#fff" stroke-width="1.8"/>
+        <text x="344" y="193" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">H</text>
+        <circle cx="420" cy="225" r="15" fill="#583870" stroke="#fff" stroke-width="1.8"/>
+        <text x="420" y="230" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">H</text>
 
-        <!-- ============ FRONT ZONE plants ============ -->
-        <!-- ★: Existing Golden Juniper — far left, spreading anchor -->
-        <circle cx="55" cy="420" r="17" fill="#9a7a00" stroke="#fff" stroke-width="2" stroke-dasharray="3,2"/>
-        <text x="55" y="425" text-anchor="middle" font-size="13" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">&#9733;</text>
+        <!-- ======== FRONT ZONE (y 280–338, verified inside polygon) ======== -->
+        <!-- ★: Golden Juniper existing — far-left spreading anchor -->
+        <circle cx="72"  cy="305" r="17" fill="#9a7a00" stroke="#fff" stroke-width="2" stroke-dasharray="3,2"/>
+        <text x="72"  y="310" text-anchor="middle" font-size="13" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">&#9733;</text>
 
-        <!-- I: Lavender #5a4870 — aromatic deer barrier, left-centre -->
-        <circle cx="115" cy="396" r="14" fill="#5a4870" stroke="#fff" stroke-width="1.8"/>
-        <text x="115" y="401" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">I</text>
-        <circle cx="170" cy="416" r="14" fill="#5a4870" stroke="#fff" stroke-width="1.8"/>
-        <text x="170" y="421" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">I</text>
+        <!-- I: Lavender — aromatic edging -->
+        <circle cx="120" cy="284" r="14" fill="#5a4870" stroke="#fff" stroke-width="1.8"/>
+        <text x="120" y="289" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">I</text>
+        <circle cx="168" cy="308" r="14" fill="#5a4870" stroke="#fff" stroke-width="1.8"/>
+        <text x="168" y="313" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">I</text>
 
-        <!-- L: Blue Star Juniper #285848 — front-right evergreen anchor -->
-        <circle cx="358" cy="412" r="14" fill="#285848" stroke="#fff" stroke-width="1.8"/>
-        <text x="358" y="417" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">L</text>
+        <!-- L: Blue Star Juniper — front-right evergreen anchor -->
+        <circle cx="338" cy="280" r="14" fill="#285848" stroke="#fff" stroke-width="1.8"/>
+        <text x="338" y="285" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">L</text>
 
-        <!-- K: Sedum Angelina #788018 — chartreuse year-round fill -->
-        <circle cx="225" cy="446" r="13" fill="#788018" stroke="#fff" stroke-width="1.8"/>
-        <text x="225" y="451" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">K</text>
-        <circle cx="272" cy="463" r="13" fill="#788018" stroke="#fff" stroke-width="1.8"/>
-        <text x="272" y="468" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">K</text>
-        <circle cx="312" cy="448" r="13" fill="#788018" stroke="#fff" stroke-width="1.8"/>
-        <text x="312" y="453" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">K</text>
+        <!-- K: Sedum Angelina — chartreuse taper fill -->
+        <circle cx="232" cy="298" r="13" fill="#788018" stroke="#fff" stroke-width="1.8"/>
+        <text x="232" y="303" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">K</text>
+        <circle cx="272" cy="316" r="13" fill="#788018" stroke="#fff" stroke-width="1.8"/>
+        <text x="272" y="321" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">K</text>
+        <circle cx="308" cy="298" r="13" fill="#788018" stroke="#fff" stroke-width="1.8"/>
+        <text x="308" y="303" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">K</text>
 
-        <!-- J: Creeping Phlox #3a6848 — spring carpet, very front edge -->
-        <circle cx="65" cy="479" r="13" fill="#3a6848" stroke="#fff" stroke-width="1.8"/>
-        <text x="65" y="484" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">J</text>
-        <circle cx="130" cy="476" r="13" fill="#3a6848" stroke="#fff" stroke-width="1.8"/>
-        <text x="130" y="481" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">J</text>
-        <circle cx="188" cy="480" r="13" fill="#3a6848" stroke="#fff" stroke-width="1.8"/>
-        <text x="188" y="485" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">J</text>
-        <circle cx="248" cy="477" r="13" fill="#3a6848" stroke="#fff" stroke-width="1.8"/>
-        <text x="248" y="482" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">J</text>
+        <!-- J: Creeping Phlox — front-edge spring carpet -->
+        <circle cx="80"  cy="336" r="13" fill="#3a6848" stroke="#fff" stroke-width="1.8"/>
+        <text x="80"  y="341" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">J</text>
+        <circle cx="132" cy="333" r="13" fill="#3a6848" stroke="#fff" stroke-width="1.8"/>
+        <text x="132" y="338" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">J</text>
+        <circle cx="184" cy="337" r="13" fill="#3a6848" stroke="#fff" stroke-width="1.8"/>
+        <text x="184" y="342" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">J</text>
+        <circle cx="238" cy="334" r="13" fill="#3a6848" stroke="#fff" stroke-width="1.8"/>
+        <text x="238" y="339" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">J</text>
 
       </svg>
       <div class="map-label map-label-curb">Curb / Street Edge &mdash; front edge 10.0 m</div>
