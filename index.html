@@ -1,0 +1,1581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zone 5a Deer-Resistant Front Yard Garden Plan</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      background: #f5f2eb;
+      color: #2c2c2c;
+      line-height: 1.65;
+    }
+
+    header {
+      background: #2d5a27;
+      color: #e8f5e3;
+      padding: 2.5rem 2rem 2rem;
+      text-align: center;
+    }
+    header h1 { font-size: 1.9rem; font-weight: normal; letter-spacing: 0.02em; margin-bottom: 0.4rem; }
+    header p { font-size: 0.95rem; color: #a8d4a0; font-style: italic; }
+
+    .specs-bar {
+      background: #e8f0e4;
+      border-top: 3px solid #5a8c4e;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 0.9rem 1rem;
+      flex-wrap: wrap;
+    }
+    .specs-bar span { font-size: 0.86rem; color: #2d5a27; font-weight: bold; letter-spacing: 0.03em; }
+    .specs-bar span::before { content: "✓  "; color: #5a8c4e; }
+
+    main { max-width: 1100px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+
+    .section-title {
+      font-size: 1.2rem;
+      font-weight: normal;
+      color: #2d5a27;
+      border-bottom: 2px solid #5a8c4e;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    /* ===== PLANTING DIAGRAM ===== */
+    .diagram-section {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      padding: 2rem;
+      margin-bottom: 3rem;
+    }
+    .diagram-note { font-size: 0.83rem; color: #777; font-style: italic; margin-bottom: 1.2rem; }
+
+    .bed-wrap { max-width: 920px; margin: 0 auto; }
+
+    .house-bar {
+      background: #3a5a35;
+      border-radius: 6px 6px 0 0;
+      padding: 0.45rem 1rem;
+      text-align: center;
+    }
+    .house-label { font-size: 0.65rem; color: rgba(255,255,255,0.55); letter-spacing: 0.15em; text-transform: uppercase; font-family: Arial, sans-serif; }
+
+    .bed-container {
+      background: #4a2e10;
+      padding: 0.8rem;
+    }
+
+    .zone-row {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      padding: 0.6rem 0.5rem;
+      border-radius: 4px;
+      margin-bottom: 0.5rem;
+    }
+    .zone-row:last-child { margin-bottom: 0; }
+    .zone-back   { background: rgba(255,255,255,0.11); }
+    .zone-middle { background: rgba(255,255,255,0.07); }
+    .zone-front  { background: rgba(255,255,255,0.04); }
+
+    .zone-info { min-width: 100px; flex-shrink: 0; }
+    .zone-info .zlabel { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.55); font-family: Arial, sans-serif; }
+    .zone-info .zheight { font-size: 0.63rem; color: rgba(255,255,255,0.35); font-family: Arial, sans-serif; margin-top: 0.1rem; }
+
+    .plant-dots { display: flex; gap: 0.55rem; flex-wrap: wrap; flex: 1; }
+
+    .pdot {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.72rem; font-weight: bold;
+      font-family: Arial, sans-serif;
+      color: #fff;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+      flex-shrink: 0;
+      border: 2px solid rgba(255,255,255,0.2);
+    }
+    .pdot.existing {
+      border: 2px dashed rgba(255,255,255,0.6);
+      background: rgba(255,255,255,0.12) !important;
+      font-size: 0.9rem;
+    }
+
+    .curb-bar {
+      background: #b0a080;
+      border-radius: 0 0 6px 6px;
+      padding: 0.35rem 1rem;
+      text-align: center;
+    }
+    .curb-label { font-size: 0.63rem; color: #5c4a2a; letter-spacing: 0.18em; text-transform: uppercase; font-family: Arial, sans-serif; font-weight: bold; }
+
+    .diagram-legend {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+      gap: 0.55rem;
+      margin-top: 1.6rem;
+    }
+    .legend-item { display: flex; align-items: center; gap: 0.6rem; font-size: 0.82rem; }
+    .ldot {
+      width: 30px; height: 30px; border-radius: 50%; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.65rem; font-weight: bold; color: #fff;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+    }
+    .ldot.existing { border: 2px dashed #888; background: #bbb !important; }
+    .legend-item .lname { font-weight: bold; color: #2c2c2c; }
+    .legend-item .lsub { color: #888; font-size: 0.75rem; font-style: italic; }
+
+    /* ===== SVG BED MAP ===== */
+    .bed-map-wrap { max-width: 720px; margin: 0 auto; }
+    .map-label { font-size: 0.68rem; text-align: center; color: #7a5c2e; letter-spacing: 0.12em; text-transform: uppercase; font-family: Arial, sans-serif; padding: 0.35rem 0; }
+    .map-label-house { padding-bottom: 0.15rem; }
+    .map-label-curb  { padding-top: 0.15rem; }
+    .bed-svg { width: 100%; height: auto; display: block; }
+    .design-rationale {
+      background: #f8f5ee;
+      border-left: 4px solid #b8913a;
+      border-radius: 0 6px 6px 0;
+      padding: 0.8rem 1.1rem;
+      font-size: 0.83rem;
+      color: #4a3a20;
+      line-height: 1.58;
+      margin: 1.3rem 0 0;
+    }
+
+    /* ===== BUDGET ===== */
+    .budget-section { margin-bottom: 3rem; }
+    .budget-tiers { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5rem; }
+
+    .budget-card { background: #fff; border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); overflow: hidden; }
+    .budget-header { padding: 1.2rem 1.5rem; color: #fff; }
+    .budget-header h3 { font-size: 1rem; font-weight: normal; margin-bottom: 0.2rem; }
+    .budget-header .btotal { font-size: 1.7rem; font-weight: bold; line-height: 1; margin-bottom: 0.3rem; }
+    .budget-header .bnote { font-size: 0.76rem; opacity: 0.8; }
+    .tier-budget  .budget-header { background: #4a7030; }
+    .tier-mid     .budget-header { background: #2a5a78; }
+    .tier-premium .budget-header { background: #4a2a70; }
+
+    .budget-body { padding: 0.8rem 1.5rem 1rem; }
+    .budget-body table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+    .budget-body td { padding: 0.28rem 0; border-bottom: 1px solid #f0ede8; }
+    .budget-body tr:last-child td { border-bottom: none; }
+    .budget-body .bprice { text-align: right; font-weight: bold; }
+    .tier-budget  .bprice { color: #4a7030; }
+    .tier-mid     .bprice { color: #2a5a78; }
+    .tier-premium .bprice { color: #4a2a70; }
+    .budget-body .btotal-row td { border-top: 2px solid #e0dbd0; padding-top: 0.5rem; font-weight: bold; font-size: 0.88rem; border-bottom: none; }
+
+    /* ===== BLOOM CALENDAR ===== */
+    .bloom-section {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      padding: 2rem;
+      margin-bottom: 3rem;
+      overflow-x: auto;
+    }
+    .bloom-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; min-width: 580px; }
+    .bloom-table th { padding: 0.4rem 0.3rem; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: #888; border-bottom: 2px solid #e0dbd0; text-align: center; }
+    .bloom-table th:first-child { text-align: left; }
+    .bloom-table td { padding: 0.35rem 0.3rem; border-bottom: 1px solid #f0ede8; vertical-align: middle; }
+    .bloom-table tr:last-child td { border-bottom: none; }
+    .bloom-table .pname { font-size: 0.83rem; width: 185px; }
+    .bloom-cell { width: 48px; text-align: center; }
+    .bloom-pip {
+      display: inline-block;
+      width: 28px; height: 14px;
+      border-radius: 7px;
+    }
+    .bloom-pip.off { background: #ebe7e0; }
+
+    /* ===== PLANT CARDS ===== */
+    .cards-section { display: flex; flex-direction: column; gap: 2.5rem; margin-top: 0.5rem; }
+
+    .plant-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      overflow: hidden;
+    }
+
+    .card-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding: 1.2rem 1.5rem;
+      gap: 1rem;
+    }
+    .card-header-left h2 { font-size: 1.3rem; font-weight: normal; color: #fff; margin-bottom: 0.2rem; }
+    .card-header-left .scientific { font-style: italic; font-size: 0.88rem; color: rgba(255,255,255,0.75); }
+
+    .hardiness-widget { flex-shrink: 0; text-align: center; min-width: 80px; }
+    .h-score { font-size: 2rem; font-weight: bold; color: #fff; line-height: 1; }
+    .h-label { font-size: 0.6rem; color: rgba(255,255,255,0.65); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 0.1rem; }
+    .h-bar-outer { width: 72px; height: 5px; background: rgba(255,255,255,0.25); border-radius: 3px; margin: 0.35rem auto 0.2rem; }
+    .h-bar-inner { height: 5px; border-radius: 3px; background: rgba(255,255,255,0.88); }
+    .h-zone { font-size: 0.65rem; color: rgba(255,255,255,0.65); }
+
+    .badges-row {
+      display: flex; gap: 0.4rem; flex-wrap: wrap;
+      padding: 0.6rem 1.5rem 0.8rem;
+      border-top: 1px solid rgba(0,0,0,0.07);
+    }
+    .badge {
+      font-size: 0.68rem; padding: 0.12rem 0.55rem; border-radius: 20px;
+      font-family: Arial, sans-serif; letter-spacing: 0.04em; text-transform: uppercase;
+    }
+    .b-spring   { background: #d4edda; color: #155724; }
+    .b-summer   { background: #fff3cd; color: #856404; }
+    .b-fall     { background: #f8e0c0; color: #7a4010; }
+    .b-evergreen{ background: #d0e8d8; color: #1a4a28; }
+    .b-deer     { background: #e8e0f0; color: #4a2870; }
+    .b-rebloom  { background: #d0e4ff; color: #1a3a70; }
+    .b-zone     { background: #f0ede8; color: #4a3a2a; }
+
+    .card-body {
+      padding: 1.2rem 1.5rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1.2rem;
+    }
+    .detail-block h3 {
+      font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.1em;
+      margin-bottom: 0.55rem; padding-bottom: 0.3rem; border-bottom: 2px solid;
+    }
+    .detail-block.highlights h3 { color: #2d5a27; border-color: #5a8c4e; }
+    .detail-block.pros h3       { color: #295c29; border-color: #5a9e5a; }
+    .detail-block.cons h3       { color: #7a3020; border-color: #c06040; }
+    .detail-block ul { list-style: none; font-size: 0.86rem; }
+    .detail-block ul li {
+      padding: 0.27rem 0 0.27rem 1.1rem;
+      position: relative;
+      border-bottom: 1px solid #f0ede8;
+    }
+    .detail-block ul li:last-child { border-bottom: none; }
+    .detail-block.highlights ul li::before { content: "◆"; color: #5a8c4e; position: absolute; left: 0; font-size: 0.58rem; top: 0.43rem; }
+    .detail-block.pros ul li::before      { content: "+"; color: #5a9e5a; position: absolute; left: 0; font-weight: bold; top: 0.26rem; }
+    .detail-block.cons ul li::before      { content: "−"; color: #c06040; position: absolute; left: 0; font-weight: bold; top: 0.26rem; }
+
+    .price-strip {
+      border-top: 1px solid #e8e4dc;
+      padding: 0.8rem 1.5rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0.5rem;
+    }
+    .price-tier { text-align: center; }
+    .price-tlabel { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.07em; color: #999; margin-bottom: 0.15rem; }
+    .price-amount { font-size: 1rem; font-weight: bold; }
+    .price-tnote { font-size: 0.68rem; color: #aaa; font-style: italic; }
+    .pt-budget  .price-amount { color: #4a7030; }
+    .pt-mid     .price-amount { color: #2a5a78; }
+    .pt-premium .price-amount { color: #4a2a70; }
+
+    .zone-bar {
+      background: #f8f5f0;
+      border-top: 1px solid #e8e4dc;
+      padding: 0.45rem 1.5rem;
+      font-size: 0.78rem;
+      color: #888;
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .zone-bar strong { color: #4a3a2a; }
+
+    /* ===== IMAGES ROW ===== */
+    .images-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0;
+    }
+    .images-row figure {
+      margin: 0; overflow: hidden;
+      aspect-ratio: 4/3; background: #ccc;
+      position: relative;
+    }
+    .images-row figure img {
+      width: 100%; height: 100%;
+      object-fit: cover; display: block;
+      transition: transform 0.3s ease;
+    }
+    .images-row figure:hover img { transform: scale(1.04); }
+    .images-row figure figcaption {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      background: rgba(0,0,0,0.52); color: #fff;
+      font-size: 0.72rem; padding: 0.3rem 0.6rem; font-style: italic;
+    }
+    .images-row a { display: block; text-decoration: none; color: inherit; }
+    .image-note {
+      font-size: 0.74rem; color: #999; font-style: italic;
+      padding: 0.35rem 1.5rem 0; background: #fff;
+    }
+    @media (max-width: 550px) { .images-row { grid-template-columns: 1fr; } }
+
+    footer {
+      text-align: center;
+      font-size: 0.78rem;
+      color: #999;
+      padding: 1.5rem;
+      border-top: 1px solid #e0dbd0;
+      background: #ede9e0;
+    }
+
+    @media (max-width: 750px) {
+      .card-body { grid-template-columns: 1fr; }
+      .budget-tiers { grid-template-columns: 1fr; }
+      .price-strip { grid-template-columns: 1fr; }
+      .zone-row { flex-wrap: wrap; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Zone 5a Deer-Resistant Front Yard Garden</h1>
+  <p>South-facing · Full sun · 260 sq ft · Manicured bed with dark mulch · Eastern Canada</p>
+</header>
+
+<div class="specs-bar">
+  <span>USDA Zone 5a (-20°F to -15°F)</span>
+  <span>High deer pressure</span>
+  <span>Full sun, south-facing</span>
+  <span>6 in. to 30 in. height mix</span>
+  <span>Spring through fall coverage</span>
+  <span>260 sq ft</span>
+</div>
+
+<main>
+
+  <!-- ===== PLANTING DIAGRAM ===== -->
+  <section class="diagram-section">
+    <h2 class="section-title">Planting Plan</h2>
+
+    <div class="bed-map-wrap">
+      <div class="map-label map-label-house">House / Foundation &mdash; back edge 21.3 m &mdash; arborvitae backdrop (existing)</div>
+      <svg class="bed-svg" viewBox="0 0 700 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Top-down planting plan for a trapezoidal front-yard garden bed">
+
+        <!-- Canvas background -->
+        <rect width="700" height="560" fill="#eae7e0"/>
+
+        <!-- Bed mulch fill -->
+        <polygon points="30,30 668,30 330,528 30,528" fill="#6b3d14" opacity="0.16"/>
+        <!-- Bed border -->
+        <polygon points="30,30 668,30 330,528 30,528" fill="none" stroke="#6b3d14" stroke-width="2.5"/>
+
+        <!-- Zone dividers (dashed) -->
+        <!-- y=180: x_right = 668 - 0.6787*150 = 668-101.8 = 566 -->
+        <line x1="30" y1="180" x2="566" y2="180" stroke="#c4a96d" stroke-width="1" stroke-dasharray="5,4" opacity="0.55"/>
+        <!-- y=360: x_right = 668 - 0.6787*330 = 668-224 = 444 -->
+        <line x1="30" y1="360" x2="444" y2="360" stroke="#c4a96d" stroke-width="1" stroke-dasharray="5,4" opacity="0.55"/>
+
+        <!-- Zone watermark labels -->
+        <text x="44" y="155" font-size="10" font-family="Arial,sans-serif" fill="#8B6914" opacity="0.45" font-style="italic" letter-spacing="1">BACK 18–30"</text>
+        <text x="44" y="310" font-size="10" font-family="Arial,sans-serif" fill="#8B6914" opacity="0.45" font-style="italic" letter-spacing="1">MIDDLE 12–18"</text>
+        <text x="44" y="490" font-size="10" font-family="Arial,sans-serif" fill="#8B6914" opacity="0.45" font-style="italic" letter-spacing="1">FRONT 6–12"</text>
+
+        <!-- Arborvitae silhouettes along house edge -->
+        <g fill="#2d5016" opacity="0.6">
+          <polygon points="48,30 62,4 76,30"/>
+          <polygon points="112,30 126,4 140,30"/>
+          <polygon points="176,30 190,4 204,30"/>
+          <polygon points="240,30 254,4 268,30"/>
+          <polygon points="304,30 318,4 332,30"/>
+          <polygon points="368,30 382,4 396,30"/>
+          <polygon points="432,30 446,4 460,30"/>
+          <polygon points="496,30 510,4 524,30"/>
+          <polygon points="560,30 574,4 588,30"/>
+          <polygon points="624,30 638,4 652,30"/>
+        </g>
+
+        <!-- Dimension labels -->
+        <text x="349" y="21" text-anchor="middle" font-size="9.5" font-family="Arial,sans-serif" fill="#7a5c2e">21.3 m</text>
+        <text x="185" y="546" text-anchor="middle" font-size="9.5" font-family="Arial,sans-serif" fill="#7a5c2e">10.0 m</text>
+
+        <!-- ============ BACK ZONE plants ============ -->
+        <!-- A: Potentilla #4a6820 — corners, yellow-green anchor -->
+        <circle cx="70" cy="100" r="15" fill="#4a6820" stroke="#fff" stroke-width="1.8"/>
+        <text x="70" y="105" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">A</text>
+        <circle cx="600" cy="105" r="15" fill="#4a6820" stroke="#fff" stroke-width="1.8"/>
+        <text x="600" y="110" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">A</text>
+
+        <!-- B: Catmint #5a4080 — purple mass across back -->
+        <circle cx="135" cy="85" r="15" fill="#5a4080" stroke="#fff" stroke-width="1.8"/>
+        <text x="135" y="90" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">B</text>
+        <circle cx="205" cy="112" r="15" fill="#5a4080" stroke="#fff" stroke-width="1.8"/>
+        <text x="205" y="117" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">B</text>
+        <circle cx="345" cy="100" r="15" fill="#5a4080" stroke="#fff" stroke-width="1.8"/>
+        <text x="345" y="105" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">B</text>
+
+        <!-- D: Echinacea #884068 — mauve-pink punctuation -->
+        <circle cx="275" cy="86" r="15" fill="#884068" stroke="#fff" stroke-width="1.8"/>
+        <text x="275" y="91" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">D</text>
+        <circle cx="480" cy="112" r="15" fill="#884068" stroke="#fff" stroke-width="1.8"/>
+        <text x="480" y="117" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">D</text>
+
+        <!-- C: Sedum Autumn Joy #7a3a18 — earthy fall anchor -->
+        <circle cx="415" cy="86" r="15" fill="#7a3a18" stroke="#fff" stroke-width="1.8"/>
+        <text x="415" y="91" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">C</text>
+        <circle cx="545" cy="86" r="15" fill="#7a3a18" stroke="#fff" stroke-width="1.8"/>
+        <text x="545" y="91" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">C</text>
+
+        <!-- ============ MIDDLE ZONE plants ============ -->
+        <!-- E: Russian Sage #284a80 — left punctuation, silvery-blue -->
+        <circle cx="70" cy="242" r="15" fill="#284a80" stroke="#fff" stroke-width="1.8"/>
+        <text x="70" y="247" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">E</text>
+
+        <!-- F: Salvia #283878 — purple spikes, alternating mass -->
+        <circle cx="130" cy="226" r="15" fill="#283878" stroke="#fff" stroke-width="1.8"/>
+        <text x="130" y="231" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">F</text>
+        <circle cx="315" cy="247" r="15" fill="#283878" stroke="#fff" stroke-width="1.8"/>
+        <text x="315" y="252" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">F</text>
+        <circle cx="475" cy="226" r="15" fill="#283878" stroke="#fff" stroke-width="1.8"/>
+        <text x="475" y="231" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">F</text>
+
+        <!-- G: Yarrow #786018 — yellow plates, textural contrast -->
+        <circle cx="195" cy="247" r="15" fill="#786018" stroke="#fff" stroke-width="1.8"/>
+        <text x="195" y="252" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">G</text>
+        <circle cx="430" cy="247" r="15" fill="#786018" stroke="#fff" stroke-width="1.8"/>
+        <text x="430" y="252" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">G</text>
+
+        <!-- H: Allium Millenium #583870 — deer-deterrent globes -->
+        <circle cx="255" cy="226" r="15" fill="#583870" stroke="#fff" stroke-width="1.8"/>
+        <text x="255" y="231" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">H</text>
+        <circle cx="375" cy="226" r="15" fill="#583870" stroke="#fff" stroke-width="1.8"/>
+        <text x="375" y="231" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">H</text>
+        <circle cx="510" cy="247" r="15" fill="#583870" stroke="#fff" stroke-width="1.8"/>
+        <text x="510" y="252" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">H</text>
+
+        <!-- ============ FRONT ZONE plants ============ -->
+        <!-- ★: Existing Golden Juniper — far left, spreading anchor -->
+        <circle cx="55" cy="420" r="17" fill="#9a7a00" stroke="#fff" stroke-width="2" stroke-dasharray="3,2"/>
+        <text x="55" y="425" text-anchor="middle" font-size="13" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">&#9733;</text>
+
+        <!-- I: Lavender #5a4870 — aromatic deer barrier, left-centre -->
+        <circle cx="115" cy="396" r="14" fill="#5a4870" stroke="#fff" stroke-width="1.8"/>
+        <text x="115" y="401" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">I</text>
+        <circle cx="170" cy="416" r="14" fill="#5a4870" stroke="#fff" stroke-width="1.8"/>
+        <text x="170" y="421" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">I</text>
+
+        <!-- L: Blue Star Juniper #285848 — front-right evergreen anchor -->
+        <circle cx="358" cy="412" r="14" fill="#285848" stroke="#fff" stroke-width="1.8"/>
+        <text x="358" y="417" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">L</text>
+
+        <!-- K: Sedum Angelina #788018 — chartreuse year-round fill -->
+        <circle cx="225" cy="446" r="13" fill="#788018" stroke="#fff" stroke-width="1.8"/>
+        <text x="225" y="451" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">K</text>
+        <circle cx="272" cy="463" r="13" fill="#788018" stroke="#fff" stroke-width="1.8"/>
+        <text x="272" y="468" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">K</text>
+        <circle cx="312" cy="448" r="13" fill="#788018" stroke="#fff" stroke-width="1.8"/>
+        <text x="312" y="453" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">K</text>
+
+        <!-- J: Creeping Phlox #3a6848 — spring carpet, very front edge -->
+        <circle cx="65" cy="479" r="13" fill="#3a6848" stroke="#fff" stroke-width="1.8"/>
+        <text x="65" y="484" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">J</text>
+        <circle cx="130" cy="476" r="13" fill="#3a6848" stroke="#fff" stroke-width="1.8"/>
+        <text x="130" y="481" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">J</text>
+        <circle cx="188" cy="480" r="13" fill="#3a6848" stroke="#fff" stroke-width="1.8"/>
+        <text x="188" y="485" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">J</text>
+        <circle cx="248" cy="477" r="13" fill="#3a6848" stroke="#fff" stroke-width="1.8"/>
+        <text x="248" y="482" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">J</text>
+
+      </svg>
+      <div class="map-label map-label-curb">Curb / Street Edge &mdash; front edge 10.0 m</div>
+    </div>
+
+    <div class="design-rationale">
+      <strong>Design rationale:</strong> Potentilla anchors both back corners with reliable yellow-green structure. Between them, Catmint (purple-lavender), Echinacea (mauve-pink), and Sedum Autumn Joy (earthy copper) alternate so no two similar colours are adjacent. The middle tier threads Russian Sage at the left as a silvery-blue accent, then cycles purple Salvia, yellow Yarrow, and onion-globe Allium across the width, creating a rhythmic wave that also deploys aromatic deer deterrents throughout. The front tapers toward the curb: Golden Juniper (existing) grounds the far left as a spreading evergreen; Lavender echoes aromatics from the middle tier; Sedum Angelina fills the diagonal right-side taper with chartreuse year-round foliage; Blue Star Juniper mirrors the left anchor at the taper point; and Creeping Phlox lines the very front edge as a spring-burst carpet that suppresses weeds through the season.
+    </div>
+
+    <div class="diagram-legend">
+      <div class="legend-item"><div class="ldot" style="background:#4a6820;">A</div><div><div class="lname">Potentilla ×2</div><div class="lsub">Happy Face Yellow — back corners</div></div></div>
+      <div class="legend-item"><div class="ldot" style="background:#5a4080;">B</div><div><div class="lname">Catmint ×3</div><div class="lsub">Walker's Low — back mass</div></div></div>
+      <div class="legend-item"><div class="ldot" style="background:#7a3a18;">C</div><div><div class="lname">Sedum 'Autumn Joy' ×2</div><div class="lsub">Fall interest — back right</div></div></div>
+      <div class="legend-item"><div class="ldot" style="background:#884068;">D</div><div><div class="lname">Echinacea ×2</div><div class="lsub">Magnus — back centre</div></div></div>
+      <div class="legend-item"><div class="ldot" style="background:#284a80;">E</div><div><div class="lname">Russian Sage ×1</div><div class="lsub">Little Spire — middle left accent</div></div></div>
+      <div class="legend-item"><div class="ldot" style="background:#283878;">F</div><div><div class="lname">Salvia ×3</div><div class="lsub">Caradonna — middle mass</div></div></div>
+      <div class="legend-item"><div class="ldot" style="background:#786018;">G</div><div><div class="lname">Yarrow ×2</div><div class="lsub">Moonshine — middle contrast</div></div></div>
+      <div class="legend-item"><div class="ldot" style="background:#583870;">H</div><div><div class="lname">Allium 'Millenium' ×3</div><div class="lsub">Middle — deer deterrent globes</div></div></div>
+      <div class="legend-item"><div class="ldot" style="background:#5a4870;">I</div><div><div class="lname">Lavender ×2</div><div class="lsub">Hidcote — front edging</div></div></div>
+      <div class="legend-item"><div class="ldot" style="background:#3a6848;">J</div><div><div class="lname">Creeping Phlox ×4</div><div class="lsub">Front carpet — spring bloom</div></div></div>
+      <div class="legend-item"><div class="ldot" style="background:#788018;">K</div><div><div class="lname">Sedum 'Angelina' ×3</div><div class="lsub">Front right taper — year-round foliage</div></div></div>
+      <div class="legend-item"><div class="ldot" style="background:#285848;">L</div><div><div class="lname">Blue Star Juniper ×1</div><div class="lsub">Front-right evergreen anchor</div></div></div>
+      <div class="legend-item"><div class="ldot" style="background:#9a7a00; border: 2px dashed #fff;">&#9733;</div><div><div class="lname">Golden Juniper (existing)</div><div class="lsub">Relocated to front-left corner</div></div></div>
+    </div>
+  </section>
+
+  <!-- ===== BUDGET ===== -->
+  <section class="budget-section">
+    <h2 class="section-title">Budget Overview — 28 Plants Total</h2>
+    <div class="budget-tiers">
+
+      <div class="budget-card tier-budget">
+        <div class="budget-header">
+          <h3>Budget</h3>
+          <div class="btotal">~$410 CAD</div>
+          <div class="bnote">Plug / starter pots · fills in over 2 seasons</div>
+        </div>
+        <div class="budget-body">
+          <table>
+            <tr><td>Potentilla ×2</td><td class="bprice">$50</td></tr>
+            <tr><td>Catmint ×3</td><td class="bprice">$45</td></tr>
+            <tr><td>Sedum 'Autumn Joy' ×2</td><td class="bprice">$30</td></tr>
+            <tr><td>Echinacea ×2</td><td class="bprice">$30</td></tr>
+            <tr><td>Russian Sage ×1</td><td class="bprice">$18</td></tr>
+            <tr><td>Salvia ×3</td><td class="bprice">$45</td></tr>
+            <tr><td>Yarrow ×2</td><td class="bprice">$24</td></tr>
+            <tr><td>Allium ×3</td><td class="bprice">$45</td></tr>
+            <tr><td>Lavender ×2</td><td class="bprice">$26</td></tr>
+            <tr><td>Creeping Phlox ×4</td><td class="bprice">$32</td></tr>
+            <tr><td>Sedum 'Angelina' ×3</td><td class="bprice">$24</td></tr>
+            <tr><td>Blue Star Juniper ×1</td><td class="bprice">$40</td></tr>
+            <tr class="btotal-row"><td>Total</td><td class="bprice">$409</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="budget-card tier-mid">
+        <div class="budget-header">
+          <h3>Mid</h3>
+          <div class="btotal">~$595 CAD</div>
+          <div class="bnote">1 gal standard pots · good first-season presence</div>
+        </div>
+        <div class="budget-body">
+          <table>
+            <tr><td>Potentilla ×2</td><td class="bprice">$60</td></tr>
+            <tr><td>Catmint ×3</td><td class="bprice">$66</td></tr>
+            <tr><td>Sedum 'Autumn Joy' ×2</td><td class="bprice">$40</td></tr>
+            <tr><td>Echinacea ×2</td><td class="bprice">$40</td></tr>
+            <tr><td>Russian Sage ×1</td><td class="bprice">$26</td></tr>
+            <tr><td>Salvia ×3</td><td class="bprice">$60</td></tr>
+            <tr><td>Yarrow ×2</td><td class="bprice">$36</td></tr>
+            <tr><td>Allium ×3</td><td class="bprice">$66</td></tr>
+            <tr><td>Lavender ×2</td><td class="bprice">$46</td></tr>
+            <tr><td>Creeping Phlox ×4</td><td class="bprice">$72</td></tr>
+            <tr><td>Sedum 'Angelina' ×3</td><td class="bprice">$36</td></tr>
+            <tr><td>Blue Star Juniper ×1</td><td class="bprice">$45</td></tr>
+            <tr class="btotal-row"><td>Total</td><td class="bprice">$593</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="budget-card tier-premium">
+        <div class="budget-header">
+          <h3>Premium</h3>
+          <div class="btotal">~$820 CAD</div>
+          <div class="bnote">2 gal pots · full coverage from year one</div>
+        </div>
+        <div class="budget-body">
+          <table>
+            <tr><td>Potentilla ×2</td><td class="bprice">$80</td></tr>
+            <tr><td>Catmint ×3</td><td class="bprice">$96</td></tr>
+            <tr><td>Sedum 'Autumn Joy' ×2</td><td class="bprice">$56</td></tr>
+            <tr><td>Echinacea ×2</td><td class="bprice">$56</td></tr>
+            <tr><td>Russian Sage ×1</td><td class="bprice">$35</td></tr>
+            <tr><td>Salvia ×3</td><td class="bprice">$84</td></tr>
+            <tr><td>Yarrow ×2</td><td class="bprice">$50</td></tr>
+            <tr><td>Allium ×3</td><td class="bprice">$90</td></tr>
+            <tr><td>Lavender ×2</td><td class="bprice">$64</td></tr>
+            <tr><td>Creeping Phlox ×4</td><td class="bprice">$100</td></tr>
+            <tr><td>Sedum 'Angelina' ×3</td><td class="bprice">$60</td></tr>
+            <tr><td>Blue Star Juniper ×1</td><td class="bprice">$50</td></tr>
+            <tr class="btotal-row"><td>Total</td><td class="bprice">$821</td></tr>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== BLOOM CALENDAR ===== -->
+  <section class="bloom-section">
+    <h2 class="section-title">Seasonal Coverage</h2>
+    <table class="bloom-table">
+      <thead>
+        <tr>
+          <th>Plant</th>
+          <th>Apr</th><th>May</th><th>Jun</th><th>Jul</th><th>Aug</th><th>Sep</th><th>Oct</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="pname">Creeping Phlox</td>
+          <td class="bloom-cell"><span class="bloom-pip" style="background:#7aaa6a;"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip" style="background:#7aaa6a;"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip off"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip off"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip off"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip off"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip off"></span></td>
+        </tr>
+        <tr>
+          <td class="pname">Potentilla</td>
+          <td class="bloom-cell"><span class="bloom-pip off"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip" style="background:#c8b820;"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip" style="background:#c8b820;"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip" style="background:#c8b820;"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip" style="background:#c8b820;"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip" style="background:#c8b820;"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip" style="background:#c8b820;"></span></td>
+        </tr>
+        <tr>
+          <td class="pname">Salvia 'Caradonna'</td>
+          <td class="bloom-cell"><span class="bloom-pip off"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip" style="background:#5060c0;"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip" style="background:#5060c0;"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip" style="background:#5060c0; opacity:0.6;" title="rebloom"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip" style="background:#5060c0; opacity:0.6;" title="rebloom"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip off"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip off"></span></td>
+        </tr>
+        <tr>
+          <td class="pname">Catmint 'Walker's Low'</td>
+          <td class="bloom-cell"><span class="bloom-pip off"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip" style="background:#8868c0;"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip" style="background:#8868c0;"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip" style="background:#8868c0;"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip" style="background:#8868c0; opacity:0.6;"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip" style="background:#8868c0; opacity:0.6;"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip off"></span></td>
+        </tr>
+        <tr>
+          <td class="pname">Lavender 'Hidcote'</td>
+          <td class="bloom-cell"><span class="bloom-pip off"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip off"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip" style="background:#9070b0;"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip" style="background:#9070b0;"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip off"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip off"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip off"></span></td>
+        </tr>
+        <tr>
+          <td class="pname">Yarrow 'Moonshine'</td>
+          <td class="bloom-cell"><span class="bloom-pip off"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip off"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip" style="background:#c8a820;"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip" style="background:#c8a820;"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip" style="background:#c8a820; opacity:0.6;"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip off"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip off"></span></td>
+        </tr>
+        <tr>
+          <td class="pname">Echinacea 'Magnus'</td>
+          <td class="bloom-cell"><span class="bloom-pip off"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip off"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip off"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip" style="background:#c07090;"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip" style="background:#c07090;"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip" style="background:#c07090;"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip off"></span></td>
+        </tr>
+        <tr>
+          <td class="pname">Allium 'Millenium'</td>
+          <td class="bloom-cell"><span class="bloom-pip off"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip off"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip off"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip" style="background:#a070c0;"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip" style="background:#a070c0;"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip off"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip off"></span></td>
+        </tr>
+        <tr>
+          <td class="pname">Russian Sage 'Little Spire'</td>
+          <td class="bloom-cell"><span class="bloom-pip off"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip off"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip off"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip" style="background:#5880c0;"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip" style="background:#5880c0;"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip" style="background:#5880c0;"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip" style="background:#5880c0;"></span></td>
+        </tr>
+        <tr>
+          <td class="pname">Sedum 'Autumn Joy'</td>
+          <td class="bloom-cell"><span class="bloom-pip off"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip off"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip off"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip off"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip" style="background:#c08060;"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip" style="background:#c08060;"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip" style="background:#a06040;"></span></td>
+        </tr>
+        <tr>
+          <td class="pname">Sedum 'Angelina' (foliage)</td>
+          <td class="bloom-cell"><span class="bloom-pip" style="background:#a0b830;"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip" style="background:#a0b830;"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip" style="background:#a0b830;"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip" style="background:#a0b830;"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip" style="background:#c89030;"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip" style="background:#c07028;"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip" style="background:#c07028;"></span></td>
+        </tr>
+        <tr>
+          <td class="pname">Blue Star Juniper (foliage)</td>
+          <td class="bloom-cell"><span class="bloom-pip" style="background:#608898;"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip" style="background:#608898;"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip" style="background:#608898;"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip" style="background:#608898;"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip" style="background:#608898;"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip" style="background:#608898;"></span></td>
+          <td class="bloom-cell"><span class="bloom-pip" style="background:#608898;"></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:0.75rem;color:#aaa;margin-top:0.8rem;font-style:italic;">Faded bars indicate lighter rebloom after deadheading/cutback. Foliage rows show color interest, not flowers.</p>
+  </section>
+
+  <!-- ===== PLANT CARDS ===== -->
+  <h2 class="section-title">Plant Guide</h2>
+  <div class="cards-section">
+
+    <!-- ===== A: POTENTILLA ===== -->
+    <div class="plant-card">
+      <div class="card-header" style="background:#4a6820;">
+        <div class="card-header-left">
+          <h2>Potentilla <span style="font-size:0.85rem;opacity:0.7;">(A)</span></h2>
+          <div class="scientific">Potentilla fruticosa 'Happy Face Yellow' / 'Abbotswood'</div>
+        </div>
+        <div class="hardiness-widget">
+          <div class="h-score">98</div>
+          <div class="h-bar-outer"><div class="h-bar-inner" style="width:98%;"></div></div>
+          <div class="h-label">Hardiness</div>
+          <div class="h-zone">Zone 2 — Excellent</div>
+        </div>
+      </div>
+      <div class="images-row">
+        <a href="https://en.wikipedia.org/wiki/Potentilla_fruticosa" target="_blank" rel="noopener"><figure><img src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Potentilla_fruticosa_01.JPG" alt="Potentilla fruticosa full shrub habit" loading="lazy"><figcaption>Full shrub habit</figcaption></figure></a>
+        <a href="https://en.wikipedia.org/wiki/Potentilla_fruticosa" target="_blank" rel="noopener"><figure><img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Dasiphora_fruticosa_close.jpg" alt="Potentilla yellow flowers close-up" loading="lazy"><figcaption>Yellow flowers close-up</figcaption></figure></a>
+        <a href="https://en.wikipedia.org/wiki/Potentilla_fruticosa" target="_blank" rel="noopener"><figure><img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Shrubby_Cinquefoil_%28Dasiphora_fruticosa%29_-_MacGregor_Point_Provincial_Park_01.jpg" alt="Shrubby cinquefoil in landscape" loading="lazy"><figcaption>Landscape specimen</figcaption></figure></a>
+      </div>
+      <div class="badges-row">
+        <span class="badge b-summer">Summer</span>
+        <span class="badge b-fall">Fall</span>
+        <span class="badge b-deer">Deer Resistant</span>
+        <span class="badge b-zone">Zone 2–7</span>
+        <span class="badge b-rebloom">Blooms May–Oct</span>
+      </div>
+      <div class="card-body">
+        <div class="detail-block highlights">
+          <h3>Highlights</h3>
+          <ul>
+            <li>18–24 in. tall and wide; dense rounded habit</li>
+            <li>Blooms May through hard frost — 5+ months</li>
+            <li>'Happy Face Yellow' = bright yellow; 'Abbotswood' = white</li>
+            <li>Extremely cold-hardy; performs in Zone 2</li>
+            <li>Deciduous shrub; most structural plant in this plan</li>
+            <li>Drought tolerant once established</li>
+          </ul>
+        </div>
+        <div class="detail-block pros">
+          <h3>Pros</h3>
+          <ul>
+            <li>Longest continuous bloom of any plant in this list</li>
+            <li>Virtually bombproof in Zone 5a — never fails to return</li>
+            <li>Low maintenance; annual spring cutback by one-third is all it needs</li>
+            <li>Tolerates poor soil, dry spells, and neglect</li>
+            <li>Excellent as a structural anchor flanking the arborvitaes</li>
+          </ul>
+        </div>
+        <div class="detail-block cons">
+          <h3>Cons</h3>
+          <ul>
+            <li>Slow to get going in spring — first color arrives late May</li>
+            <li>Bright yellow may need pairing consideration; choose 'Abbotswood' (white) for softer look</li>
+            <li>Can look sparse in winter without snow cover</li>
+            <li>Deer resistance is good but not as strong as aromatic plants</li>
+          </ul>
+        </div>
+      </div>
+      <div class="price-strip">
+        <div class="price-tier pt-budget"><div class="price-tlabel">Budget</div><div class="price-amount">$25/ea</div><div class="price-tnote">1 qt / plug</div></div>
+        <div class="price-tier pt-mid"><div class="price-tlabel">Mid</div><div class="price-amount">$30/ea</div><div class="price-tnote">1 gal</div></div>
+        <div class="price-tier pt-premium"><div class="price-tlabel">Premium</div><div class="price-amount">$40/ea</div><div class="price-tnote">2 gal</div></div>
+      </div>
+      <div class="zone-bar">
+        <span>Zone <strong>2–7</strong></span>
+        <span>Sun <strong>Full</strong></span>
+        <span>Type <strong>Deciduous shrub</strong></span>
+        <span>Size <strong>18–24 in. × 18–24 in.</strong></span>
+      </div>
+    </div>
+
+    <!-- ===== B: CATMINT ===== -->
+    <div class="plant-card">
+      <div class="card-header" style="background:#3a2868;">
+        <div class="card-header-left">
+          <h2>Catmint 'Walker's Low' <span style="font-size:0.85rem;opacity:0.7;">(B)</span></h2>
+          <div class="scientific">Nepeta × faassenii 'Walker's Low'</div>
+        </div>
+        <div class="hardiness-widget">
+          <div class="h-score">94</div>
+          <div class="h-bar-outer"><div class="h-bar-inner" style="width:94%;"></div></div>
+          <div class="h-label">Hardiness</div>
+          <div class="h-zone">Zone 3 — Excellent</div>
+        </div>
+      </div>
+      <div class="images-row">
+        <a href="https://en.wikipedia.org/wiki/Nepeta_%C3%97_faassenii" target="_blank" rel="noopener"><figure><img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Nepeta_faassenii_catmint_Easton_Lodge_Gardens_walled_garden_Little_Easton_Essex_England_01.jpg" alt="Catmint in walled garden border" loading="lazy"><figcaption>Catmint in garden border</figcaption></figure></a>
+        <a href="https://en.wikipedia.org/wiki/Nepeta_%C3%97_faassenii" target="_blank" rel="noopener"><figure><img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/%28MHNT%29_Nepeta_%C3%97_faassenii_-_flowers.jpg" alt="Catmint lavender flower detail" loading="lazy"><figcaption>Lavender flower detail</figcaption></figure></a>
+        <a href="https://en.wikipedia.org/wiki/Nepeta_%C3%97_faassenii" target="_blank" rel="noopener"><figure><img src="https://upload.wikimedia.org/wikipedia/commons/5/57/Nepeta_faassenii_katzenminze.jpg" alt="Catmint with bee pollinator" loading="lazy"><figcaption>Bee foraging catmint</figcaption></figure></a>
+      </div>
+      <p class="image-note">Images show Nepeta × faassenii (parent species). 'Walker's Low' is a cultivar of this species and is visually identical in photographs.</p>
+      <div class="badges-row">
+        <span class="badge b-spring">Late Spring</span>
+        <span class="badge b-summer">Summer</span>
+        <span class="badge b-rebloom">Reblooms</span>
+        <span class="badge b-deer">Deer Resistant</span>
+        <span class="badge b-zone">Zone 3–8</span>
+      </div>
+      <div class="card-body">
+        <div class="detail-block highlights">
+          <h3>Highlights</h3>
+          <ul>
+            <li>18–24 in. tall × 24–36 in. wide; loose mounded habit</li>
+            <li>Lavender-blue flower spikes May through July</li>
+            <li>Reblooms late summer after cutback</li>
+            <li>Strongly aromatic silver-green foliage deters deer reliably</li>
+            <li>2007 Perennial Plant of the Year</li>
+          </ul>
+        </div>
+        <div class="detail-block pros">
+          <h3>Pros</h3>
+          <ul>
+            <li>One of the most reliable deer-deterrents in this entire plan</li>
+            <li>Long bloom with a second flush if cut back mid-summer</li>
+            <li>Extremely cold-hardy; never needs winter protection</li>
+            <li>Drought tolerant; thrives in the dry heat of a south-facing bed</li>
+            <li>Fills large areas effectively; 3 plants covers ~15–20 sq ft</li>
+          </ul>
+        </div>
+        <div class="detail-block cons">
+          <h3>Cons</h3>
+          <ul>
+            <li>Can flop open after heavy rain without a cutback</li>
+            <li>Requires cutting back by half in July to trigger rebloom</li>
+            <li>Spreads and may need dividing every 3–4 years</li>
+            <li>Foliage can look untidy if not tidied up in fall</li>
+          </ul>
+        </div>
+      </div>
+      <div class="price-strip">
+        <div class="price-tier pt-budget"><div class="price-tlabel">Budget</div><div class="price-amount">$15/ea</div><div class="price-tnote">plug / starter</div></div>
+        <div class="price-tier pt-mid"><div class="price-tlabel">Mid</div><div class="price-amount">$22/ea</div><div class="price-tnote">1 gal</div></div>
+        <div class="price-tier pt-premium"><div class="price-tlabel">Premium</div><div class="price-amount">$32/ea</div><div class="price-tnote">2 gal</div></div>
+      </div>
+      <div class="zone-bar">
+        <span>Zone <strong>3–8</strong></span>
+        <span>Sun <strong>Full</strong></span>
+        <span>Type <strong>Perennial</strong></span>
+        <span>Size <strong>18–24 in. × 24–36 in.</strong></span>
+      </div>
+    </div>
+
+    <!-- ===== C: SEDUM AUTUMN JOY ===== -->
+    <div class="plant-card">
+      <div class="card-header" style="background:#5a2a10;">
+        <div class="card-header-left">
+          <h2>Sedum 'Autumn Joy' <span style="font-size:0.85rem;opacity:0.7;">(C)</span></h2>
+          <div class="scientific">Hylotelephium telephium 'Autumn Joy'</div>
+        </div>
+        <div class="hardiness-widget">
+          <div class="h-score">96</div>
+          <div class="h-bar-outer"><div class="h-bar-inner" style="width:96%;"></div></div>
+          <div class="h-label">Hardiness</div>
+          <div class="h-zone">Zone 3 — Excellent</div>
+        </div>
+      </div>
+      <div class="images-row">
+        <a href="https://en.wikipedia.org/wiki/Hylotelephium_telephium" target="_blank" rel="noopener"><figure><img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Sedum_spectabile_x_S._telephium_%22Autumn_Joy%22_%28Crassulaceae%29_%28plant%29.JPG" alt="Sedum Autumn Joy full plant" loading="lazy"><figcaption>Full plant habit</figcaption></figure></a>
+        <a href="https://en.wikipedia.org/wiki/Hylotelephium_telephium" target="_blank" rel="noopener"><figure><img src="https://upload.wikimedia.org/wikipedia/commons/0/00/Sedum_spectabile_x_S._telephium_%22Autumn_Joy%22_%28Crassulaceae%29_%28flower%29.JPG" alt="Autumn Joy pink flower heads" loading="lazy"><figcaption>Pink flower heads</figcaption></figure></a>
+        <a href="https://en.wikipedia.org/wiki/Hylotelephium_telephium" target="_blank" rel="noopener"><figure><img src="https://upload.wikimedia.org/wikipedia/commons/5/58/Showy_Stonecrop_%27Autumn_Joy%27_%28Sedum_%29_bush.jpg" alt="Autumn Joy garden clump in bloom" loading="lazy"><figcaption>Garden clump in bloom</figcaption></figure></a>
+      </div>
+      <div class="badges-row">
+        <span class="badge b-fall">Late Summer</span>
+        <span class="badge b-fall">Fall</span>
+        <span class="badge b-deer">Deer Resistant</span>
+        <span class="badge b-zone">Zone 3–9</span>
+      </div>
+      <div class="card-body">
+        <div class="detail-block highlights">
+          <h3>Highlights</h3>
+          <ul>
+            <li>18–24 in. tall and wide; upright, then mounding</li>
+            <li>Flowers open dusty pink (Aug), mature through salmon to bronze (Oct)</li>
+            <li>Dried seed heads persist through winter — ornamental in snow</li>
+            <li>Zone 3 hardy; thrives on neglect</li>
+            <li>Thick, succulent foliage provides textural contrast all season</li>
+          </ul>
+        </div>
+        <div class="detail-block pros">
+          <h3>Pros</h3>
+          <ul>
+            <li>Fills the critical late-summer/fall gap when most plants are done</li>
+            <li>Winter seed heads add structure when the bed is otherwise bare</li>
+            <li>Thick succulent leaves are extremely unappealing to deer</li>
+            <li>Drought tolerant once established</li>
+            <li>Very low maintenance — essentially plant and forget</li>
+          </ul>
+        </div>
+        <div class="detail-block cons">
+          <h3>Cons</h3>
+          <ul>
+            <li>No spring or early summer interest — plain green mound until August</li>
+            <li>Center can become woody after 4–5 years; needs division</li>
+            <li>Can fall open (lodge) in very wet summers without support</li>
+            <li>Bronze-pink fall tones could read as warm/orange — not red but check in person</li>
+          </ul>
+        </div>
+      </div>
+      <div class="price-strip">
+        <div class="price-tier pt-budget"><div class="price-tlabel">Budget</div><div class="price-amount">$15/ea</div><div class="price-tnote">plug / starter</div></div>
+        <div class="price-tier pt-mid"><div class="price-tlabel">Mid</div><div class="price-amount">$20/ea</div><div class="price-tnote">1 gal · Home Depot ~$24</div></div>
+        <div class="price-tier pt-premium"><div class="price-tlabel">Premium</div><div class="price-amount">$28/ea</div><div class="price-tnote">2 gal</div></div>
+      </div>
+      <div class="zone-bar">
+        <span>Zone <strong>3–9</strong></span>
+        <span>Sun <strong>Full</strong></span>
+        <span>Type <strong>Perennial</strong></span>
+        <span>Size <strong>18–24 in. × 18–24 in.</strong></span>
+      </div>
+    </div>
+
+    <!-- ===== D: ECHINACEA ===== -->
+    <div class="plant-card">
+      <div class="card-header" style="background:#662050;">
+        <div class="card-header-left">
+          <h2>Echinacea 'Magnus' <span style="font-size:0.85rem;opacity:0.7;">(D)</span></h2>
+          <div class="scientific">Echinacea purpurea 'Magnus' — or 'Kim's Knee High' for compact form</div>
+        </div>
+        <div class="hardiness-widget">
+          <div class="h-score">93</div>
+          <div class="h-bar-outer"><div class="h-bar-inner" style="width:93%;"></div></div>
+          <div class="h-label">Hardiness</div>
+          <div class="h-zone">Zone 3 — Excellent</div>
+        </div>
+      </div>
+      <div class="images-row">
+        <a href="https://en.wikipedia.org/wiki/Echinacea_purpurea" target="_blank" rel="noopener"><figure><img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Echinacea_purpurea_001.JPG" alt="Purple coneflower full plant" loading="lazy"><figcaption>Full plant habit</figcaption></figure></a>
+        <a href="https://en.wikipedia.org/wiki/Echinacea_purpurea" target="_blank" rel="noopener"><figure><img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Echinacea_purpurea_002.JPG" alt="Coneflower bloom close-up" loading="lazy"><figcaption>Bloom close-up</figcaption></figure></a>
+        <a href="https://en.wikipedia.org/wiki/Echinacea_purpurea" target="_blank" rel="noopener"><figure><img src="https://upload.wikimedia.org/wikipedia/commons/7/76/Echinacea_purpurea_%28purple_coneflowers%29_3_%2838566472155%29.jpg" alt="Coneflowers in garden planting" loading="lazy"><figcaption>Garden planting</figcaption></figure></a>
+      </div>
+      <p class="image-note">Images show Echinacea purpurea (species). 'Magnus' is the standard horticultural form and is visually representative of these photos.</p>
+      <div class="badges-row">
+        <span class="badge b-summer">Summer</span>
+        <span class="badge b-fall">Early Fall</span>
+        <span class="badge b-deer">Deer Resistant</span>
+        <span class="badge b-zone">Zone 3–9</span>
+      </div>
+      <div class="card-body">
+        <div class="detail-block highlights">
+          <h3>Highlights</h3>
+          <ul>
+            <li>'Magnus': 24–30 in. tall; 'Kim's Knee High': 18–24 in. (better for this bed)</li>
+            <li>Rose-pink petals with raised spiny orange-bronze cone; July–September</li>
+            <li>North American native; exceptional pollinator and goldfinch value</li>
+            <li>Coarse, rough-textured foliage; generally deer-avoided</li>
+            <li>Seed heads provide winter structure and bird food if left standing</li>
+          </ul>
+        </div>
+        <div class="detail-block pros">
+          <h3>Pros</h3>
+          <ul>
+            <li>Bold, showy flowers in the mid-summer gap between salvia and sedum</li>
+            <li>Native plant — better ecological value than ornamentals</li>
+            <li>Attracts goldfinches to seed heads in fall and winter</li>
+            <li>Tolerates poor, dry soil; thrives in south-facing heat</li>
+            <li>Long-lived once established; rarely needs dividing</li>
+          </ul>
+        </div>
+        <div class="detail-block cons">
+          <h3>Cons</h3>
+          <ul>
+            <li>Deer resistance is good but not as reliable as aromatic plants</li>
+            <li>Can self-sow prolifically if seed heads are left (thin seedlings in spring)</li>
+            <li>Pink tones are warm — avoid 'Magnus' if pink is a concern; try 'White Swan' instead</li>
+            <li>Takes 2–3 years to bloom heavily from a small pot</li>
+          </ul>
+        </div>
+      </div>
+      <div class="price-strip">
+        <div class="price-tier pt-budget"><div class="price-tlabel">Budget</div><div class="price-amount">$15/ea</div><div class="price-tnote">plug / starter</div></div>
+        <div class="price-tier pt-mid"><div class="price-tlabel">Mid</div><div class="price-amount">$20/ea</div><div class="price-tnote">1 gal · PlantCentral ~$20</div></div>
+        <div class="price-tier pt-premium"><div class="price-tlabel">Premium</div><div class="price-amount">$28/ea</div><div class="price-tnote">2 gal</div></div>
+      </div>
+      <div class="zone-bar">
+        <span>Zone <strong>3–9</strong></span>
+        <span>Sun <strong>Full</strong></span>
+        <span>Type <strong>Perennial</strong></span>
+        <span>Size <strong>18–30 in. × 18–24 in.</strong></span>
+      </div>
+    </div>
+
+    <!-- ===== E: RUSSIAN SAGE ===== -->
+    <div class="plant-card">
+      <div class="card-header" style="background:#1c3a60;">
+        <div class="card-header-left">
+          <h2>Russian Sage 'Little Spire' <span style="font-size:0.85rem;opacity:0.7;">(E)</span></h2>
+          <div class="scientific">Salvia yangii 'Little Spire' (formerly Perovskia atriplicifolia)</div>
+        </div>
+        <div class="hardiness-widget">
+          <div class="h-score">72</div>
+          <div class="h-bar-outer"><div class="h-bar-inner" style="width:72%;background:rgba(255,230,100,0.9);"></div></div>
+          <div class="h-label">Hardiness</div>
+          <div class="h-zone">Zone 5 — Good</div>
+        </div>
+      </div>
+      <div class="images-row">
+        <a href="https://en.wikipedia.org/wiki/Salvia_yangii" target="_blank" rel="noopener"><figure><img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Perovskia_atriplicifolia_0zz.jpg" alt="Russian sage full plant habit" loading="lazy"><figcaption>Full plant habit</figcaption></figure></a>
+        <a href="https://en.wikipedia.org/wiki/Salvia_yangii" target="_blank" rel="noopener"><figure><img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Perovskia_atriplicifolia_2011.08.05.jpg" alt="Violet-blue Russian sage flower spikes" loading="lazy"><figcaption>Violet-blue flower spikes</figcaption></figure></a>
+        <a href="https://en.wikipedia.org/wiki/Salvia_yangii" target="_blank" rel="noopener"><figure><img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Perovskia_atriplicifolia_1c.JPG" alt="Russian sage in full bloom" loading="lazy"><figcaption>In full summer bloom</figcaption></figure></a>
+      </div>
+      <div class="badges-row">
+        <span class="badge b-summer">Mid Summer</span>
+        <span class="badge b-fall">Fall</span>
+        <span class="badge b-deer">Deer Resistant</span>
+        <span class="badge b-zone">Zone 5–10</span>
+      </div>
+      <div class="card-body">
+        <div class="detail-block highlights">
+          <h3>Highlights</h3>
+          <ul>
+            <li>24 in. tall and wide; upright, airy silver-white branching stems</li>
+            <li>Violet-blue flowers July through October — one of the longest bloomers</li>
+            <li>Pungent aromatic foliage; deer avoid it consistently</li>
+            <li>Silver stems provide winter structure after foliage drops</li>
+            <li>'Little Spire' is the compact form; standard Perovskia reaches 4+ ft</li>
+          </ul>
+        </div>
+        <div class="detail-block pros">
+          <h3>Pros</h3>
+          <ul>
+            <li>Violet-blue from July to frost — fills the critical late-season color gap</li>
+            <li>Airy, fine texture contrasts beautifully with bold-leaved plants</li>
+            <li>Extremely drought tolerant; south-facing heat is not a problem</li>
+            <li>Silver-white stems remain ornamental in snow</li>
+          </ul>
+        </div>
+        <div class="detail-block cons">
+          <h3>Cons</h3>
+          <ul>
+            <li>Zone 5 is its cold limit — lower hardiness score than most plants here</li>
+            <li>Must NOT be cut back in fall; old stems protect the crown through winter</li>
+            <li>Needs excellent drainage; will not survive wet clay over winter</li>
+            <li>Woody base dies back fully; looks dead until late May — do not pull it out</li>
+          </ul>
+        </div>
+      </div>
+      <div class="price-strip">
+        <div class="price-tier pt-budget"><div class="price-tlabel">Budget</div><div class="price-amount">$18/ea</div><div class="price-tnote">plug / starter</div></div>
+        <div class="price-tier pt-mid"><div class="price-tlabel">Mid</div><div class="price-amount">$26/ea</div><div class="price-tnote">1 gal · Garden Girl ~$26</div></div>
+        <div class="price-tier pt-premium"><div class="price-tlabel">Premium</div><div class="price-amount">$35/ea</div><div class="price-tnote">2 gal</div></div>
+      </div>
+      <div class="zone-bar">
+        <span>Zone <strong>5–10</strong></span>
+        <span>Sun <strong>Full — mandatory</strong></span>
+        <span>Type <strong>Deciduous sub-shrub</strong></span>
+        <span>Size <strong>24 in. × 24 in.</strong></span>
+      </div>
+    </div>
+
+    <!-- ===== F: SALVIA CARADONNA ===== -->
+    <div class="plant-card">
+      <div class="card-header" style="background:#1e2860;">
+        <div class="card-header-left">
+          <h2>Salvia 'Caradonna' <span style="font-size:0.85rem;opacity:0.7;">(F)</span></h2>
+          <div class="scientific">Salvia nemorosa 'Caradonna'</div>
+        </div>
+        <div class="hardiness-widget">
+          <div class="h-score">83</div>
+          <div class="h-bar-outer"><div class="h-bar-inner" style="width:83%;"></div></div>
+          <div class="h-label">Hardiness</div>
+          <div class="h-zone">Zone 4 — Very Good</div>
+        </div>
+      </div>
+      <div class="images-row">
+        <a href="https://en.wikipedia.org/wiki/Salvia_nemorosa" target="_blank" rel="noopener"><figure><img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Salvia_nemorosa_%27Caradonna%27.JPG" alt="Salvia Caradonna dark violet spikes" loading="lazy"><figcaption>Dark violet spikes</figcaption></figure></a>
+        <a href="https://en.wikipedia.org/wiki/Salvia_nemorosa" target="_blank" rel="noopener"><figure><img src="https://upload.wikimedia.org/wikipedia/commons/c/c6/Salvia_nemorosa_%27Caradonna%27_with_bee.jpg" alt="Salvia Caradonna with bee" loading="lazy"><figcaption>Caradonna with bee</figcaption></figure></a>
+        <a href="https://en.wikipedia.org/wiki/Salvia_nemorosa" target="_blank" rel="noopener"><figure><img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Salvia_nemorosa_Carradonna_1zz.jpg" alt="Caradonna salvia spike portrait" loading="lazy"><figcaption>Spike portrait</figcaption></figure></a>
+      </div>
+      <div class="badges-row">
+        <span class="badge b-spring">Late Spring</span>
+        <span class="badge b-summer">Summer</span>
+        <span class="badge b-rebloom">Reblooms</span>
+        <span class="badge b-deer">Deer Resistant</span>
+        <span class="badge b-zone">Zone 4–8</span>
+      </div>
+      <div class="card-body">
+        <div class="detail-block highlights">
+          <h3>Highlights</h3>
+          <ul>
+            <li>18–24 in. tall × 18 in. wide; upright architectural habit</li>
+            <li>Violet-blue spikes on dramatically dark purple-black stems</li>
+            <li>Blooms May–June; reblooms 2–3 times with deadheading</li>
+            <li>Aromatic foliage; strongly deer-avoided</li>
+            <li>Bridges the spring-to-summer bloom gap perfectly</li>
+          </ul>
+        </div>
+        <div class="detail-block pros">
+          <h3>Pros</h3>
+          <ul>
+            <li>The near-black stems are architecturally striking — unique in this plant list</li>
+            <li>Reliable rebloom extends color deep into summer</li>
+            <li>Extremely deer resistant due to aromatic, slightly rough foliage</li>
+            <li>Pairs beautifully with yellow yarrow and lavender</li>
+            <li>Tolerates heat and drought once established</li>
+          </ul>
+        </div>
+        <div class="detail-block cons">
+          <h3>Cons</h3>
+          <ul>
+            <li>Rebloom requires deadheading — skipping it stops the second and third flush</li>
+            <li>Dies back to ground in winter; crown is not visible until late spring</li>
+            <li>Needs dividing every 3–4 years as clump expands</li>
+            <li>Upright habit leaves gaps between plants in early years</li>
+          </ul>
+        </div>
+      </div>
+      <div class="price-strip">
+        <div class="price-tier pt-budget"><div class="price-tlabel">Budget</div><div class="price-amount">$15/ea</div><div class="price-tnote">plug / starter</div></div>
+        <div class="price-tier pt-mid"><div class="price-tlabel">Mid</div><div class="price-amount">$20/ea</div><div class="price-tnote">1 gal · PlantCentral ~$20</div></div>
+        <div class="price-tier pt-premium"><div class="price-tlabel">Premium</div><div class="price-amount">$28/ea</div><div class="price-tnote">2 gal</div></div>
+      </div>
+      <div class="zone-bar">
+        <span>Zone <strong>4–8</strong></span>
+        <span>Sun <strong>Full</strong></span>
+        <span>Type <strong>Perennial</strong></span>
+        <span>Size <strong>18–24 in. × 18 in.</strong></span>
+      </div>
+    </div>
+
+    <!-- ===== G: YARROW ===== -->
+    <div class="plant-card">
+      <div class="card-header" style="background:#5a4a10;">
+        <div class="card-header-left">
+          <h2>Yarrow 'Moonshine' <span style="font-size:0.85rem;opacity:0.7;">(G)</span></h2>
+          <div class="scientific">Achillea × 'Moonshine'</div>
+        </div>
+        <div class="hardiness-widget">
+          <div class="h-score">96</div>
+          <div class="h-bar-outer"><div class="h-bar-inner" style="width:96%;"></div></div>
+          <div class="h-label">Hardiness</div>
+          <div class="h-zone">Zone 3 — Excellent</div>
+        </div>
+      </div>
+      <div class="images-row">
+        <a href="https://en.wikipedia.org/wiki/Achillea" target="_blank" rel="noopener"><figure><img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Yarrow_Hybrid_Achillea_%27Moonshine%27_Emerging_Flowers_2100px.JPG" alt="Achillea Moonshine emerging buds" loading="lazy"><figcaption>Moonshine emerging buds</figcaption></figure></a>
+        <a href="https://en.wikipedia.org/wiki/Achillea" target="_blank" rel="noopener"><figure><img src="https://upload.wikimedia.org/wikipedia/commons/5/57/Achillea_millefolium_7981.JPG" alt="Yarrow flat-top flower clusters" loading="lazy"><figcaption>Flat-top flower clusters</figcaption></figure></a>
+        <a href="https://en.wikipedia.org/wiki/Achillea" target="_blank" rel="noopener"><figure><img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Yarrow%2C_Achillea_millefolium_%2840571521540%29.jpg" alt="Yarrow corymb flower detail" loading="lazy"><figcaption>Flower corymb detail</figcaption></figure></a>
+      </div>
+      <p class="image-note">Image 1 is 'Moonshine' cultivar. Images 2–3 show Achillea millefolium (species) as representative of the same flat-top habit and silvery foliage.</p>
+      <div class="badges-row">
+        <span class="badge b-summer">Summer</span>
+        <span class="badge b-rebloom">Reblooms</span>
+        <span class="badge b-deer">Deer Resistant</span>
+        <span class="badge b-zone">Zone 3–9</span>
+      </div>
+      <div class="card-body">
+        <div class="detail-block highlights">
+          <h3>Highlights</h3>
+          <ul>
+            <li>18–24 in. tall and wide; flat-topped flower clusters on upright stems</li>
+            <li>Canary yellow clusters June–August; fades to soft cream as it ages</li>
+            <li>Silvery-gray feathery foliage is ornamental even outside bloom</li>
+            <li>Strongly aromatic; one of the most deer-avoided perennials</li>
+            <li>'Moonshine' is a sterile hybrid — less aggressive than species yarrow</li>
+          </ul>
+        </div>
+        <div class="detail-block pros">
+          <h3>Pros</h3>
+          <ul>
+            <li>Bold color contrast to the blue/purple salvia and catmint in the middle zone</li>
+            <li>Silver foliage provides interest between bloom flushes</li>
+            <li>Extremely drought tolerant; thrives in poor, dry soil</li>
+            <li>Very cold-hardy and long-lived</li>
+            <li>Deadhead for a second flush in late summer</li>
+          </ul>
+        </div>
+        <div class="detail-block cons">
+          <h3>Cons</h3>
+          <ul>
+            <li>Rich or moist soil causes floppy stems that need staking</li>
+            <li>Spreads by rhizome and can invade neighbors; divide every 3–4 years</li>
+            <li>Cut spent flower clusters promptly or they look untidy</li>
+            <li>Bright yellow may be strong against certain house colors — consider pairing first</li>
+          </ul>
+        </div>
+      </div>
+      <div class="price-strip">
+        <div class="price-tier pt-budget"><div class="price-tlabel">Budget</div><div class="price-amount">$12/ea</div><div class="price-tnote">plug / starter</div></div>
+        <div class="price-tier pt-mid"><div class="price-tlabel">Mid</div><div class="price-amount">$18/ea</div><div class="price-tnote">1 gal · PlantCentral ~$20</div></div>
+        <div class="price-tier pt-premium"><div class="price-tlabel">Premium</div><div class="price-amount">$25/ea</div><div class="price-tnote">2 gal</div></div>
+      </div>
+      <div class="zone-bar">
+        <span>Zone <strong>3–9</strong></span>
+        <span>Sun <strong>Full — mandatory</strong></span>
+        <span>Type <strong>Perennial</strong></span>
+        <span>Size <strong>18–24 in. × 18–24 in.</strong></span>
+      </div>
+    </div>
+
+    <!-- ===== H: ALLIUM ===== -->
+    <div class="plant-card">
+      <div class="card-header" style="background:#3c2858;">
+        <div class="card-header-left">
+          <h2>Allium 'Millenium' <span style="font-size:0.85rem;opacity:0.7;">(H)</span></h2>
+          <div class="scientific">Allium 'Millenium' — ornamental onion (true perennial, not a bulb)</div>
+        </div>
+        <div class="hardiness-widget">
+          <div class="h-score">85</div>
+          <div class="h-bar-outer"><div class="h-bar-inner" style="width:85%;"></div></div>
+          <div class="h-label">Hardiness</div>
+          <div class="h-zone">Zone 4 — Very Good</div>
+        </div>
+      </div>
+      <div class="images-row">
+        <a href="https://en.wikipedia.org/wiki/Allium" target="_blank" rel="noopener"><figure><img src="https://upload.wikimedia.org/wikipedia/commons/0/01/Allium_hollandicum_%27Purple_Sensation%27%2C_Longwood_Gardens_2023_01.jpg" alt="Ornamental onion globe flowers in garden" loading="lazy"><figcaption>Globe flowers in garden</figcaption></figure></a>
+        <a href="https://en.wikipedia.org/wiki/Allium" target="_blank" rel="noopener"><figure><img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/Allium_hollandicum_%27Purple_Sensation%27_Czosnek_2010-05-15_01.jpg" alt="Allium globe flower umbel close-up" loading="lazy"><figcaption>Globe umbel close-up</figcaption></figure></a>
+        <a href="https://en.wikipedia.org/wiki/Allium" target="_blank" rel="noopener"><figure><img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Flowering_Onion_Allium_aflatunense_%27Purple_Sensation%27_Flower_2319px.jpg" alt="Ornamental onion flower portrait" loading="lazy"><figcaption>Flower portrait</figcaption></figure></a>
+      </div>
+      <p class="image-note">Images show Allium hollandicum 'Purple Sensation' as representative. 'Millenium' has the same globe form in a softer lavender-pink and shorter stature.</p>
+      <div class="badges-row">
+        <span class="badge b-summer">Mid Summer</span>
+        <span class="badge b-deer">Strong Deer Deterrent</span>
+        <span class="badge b-zone">Zone 4–9</span>
+      </div>
+      <div class="card-body">
+        <div class="detail-block highlights">
+          <h3>Highlights</h3>
+          <ul>
+            <li>15–20 in. tall × 10–15 in. wide; upright clumping habit</li>
+            <li>Lavender-pink globe flowers July–August</li>
+            <li>2018 Perennial Plant of the Year</li>
+            <li>True perennial — returns reliably year after year (not a one-season bulb)</li>
+            <li>Allium scent is one of the most reliable deer deterrents in horticulture</li>
+          </ul>
+        </div>
+        <div class="detail-block pros">
+          <h3>Pros</h3>
+          <ul>
+            <li>Acts as a living deer repellent scattered through the middle zone</li>
+            <li>Fills July–August gap when catmint and salvia are resting between flushes</li>
+            <li>Attracts pollinators heavily during bloom</li>
+            <li>Glossy, neat foliage stays tidy all season</li>
+            <li>No deadheading required</li>
+          </ul>
+        </div>
+        <div class="detail-block cons">
+          <h3>Cons</h3>
+          <ul>
+            <li>Relatively narrow clumping habit — less visual mass than spreading plants</li>
+            <li>Foliage dies back completely in winter; crown slow to emerge in spring</li>
+            <li>Needs dividing every 3–4 years to maintain vigor</li>
+            <li>Bloom window is 4–6 weeks — shorter than most other plants in this list</li>
+          </ul>
+        </div>
+      </div>
+      <div class="price-strip">
+        <div class="price-tier pt-budget"><div class="price-tlabel">Budget</div><div class="price-amount">$15/ea</div><div class="price-tnote">plug / starter</div></div>
+        <div class="price-tier pt-mid"><div class="price-tlabel">Mid</div><div class="price-amount">$22/ea</div><div class="price-tnote">1 gal · PlantCentral ~$22</div></div>
+        <div class="price-tier pt-premium"><div class="price-tlabel">Premium</div><div class="price-amount">$30/ea</div><div class="price-tnote">2 gal</div></div>
+      </div>
+      <div class="zone-bar">
+        <span>Zone <strong>4–9</strong></span>
+        <span>Sun <strong>Full to part shade</strong></span>
+        <span>Type <strong>Perennial</strong></span>
+        <span>Size <strong>15–20 in. × 10–15 in.</strong></span>
+      </div>
+    </div>
+
+    <!-- ===== I: LAVENDER ===== -->
+    <div class="plant-card">
+      <div class="card-header" style="background:#3e3060;">
+        <div class="card-header-left">
+          <h2>Lavender 'Hidcote' <span style="font-size:0.85rem;opacity:0.7;">(I)</span></h2>
+          <div class="scientific">Lavandula angustifolia 'Hidcote'</div>
+        </div>
+        <div class="hardiness-widget">
+          <div class="h-score">67</div>
+          <div class="h-bar-outer"><div class="h-bar-inner" style="width:67%;background:rgba(255,200,80,0.9);"></div></div>
+          <div class="h-label">Hardiness</div>
+          <div class="h-zone">Zone 5 — Marginal</div>
+        </div>
+      </div>
+      <div class="images-row">
+        <a href="https://en.wikipedia.org/wiki/Lavandula_angustifolia" target="_blank" rel="noopener"><figure><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Lavandula_angustifolia_%27Hidcote%27_%27English_Lavender%27_%28Labiatae%29_plant.JPG" alt="Hidcote lavender full plant" loading="lazy"><figcaption>Hidcote full plant</figcaption></figure></a>
+        <a href="https://en.wikipedia.org/wiki/Lavandula_angustifolia" target="_blank" rel="noopener"><figure><img src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Lavanda_nana_%28Lavandula_angustifolia_var._Hidcote_blue%29_%287996218850%29.jpg" alt="Hidcote Blue lavender spikes" loading="lazy"><figcaption>Hidcote Blue spikes</figcaption></figure></a>
+        <a href="https://en.wikipedia.org/wiki/Lavandula_angustifolia" target="_blank" rel="noopener"><figure><img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Lavandula_angustifolia_002.JPG" alt="English lavender flower spikes" loading="lazy"><figcaption>English lavender spikes</figcaption></figure></a>
+      </div>
+      <div class="badges-row">
+        <span class="badge b-summer">Summer</span>
+        <span class="badge b-evergreen">Semi-Evergreen</span>
+        <span class="badge b-deer">Deer Resistant</span>
+        <span class="badge b-zone">Zone 5–8</span>
+      </div>
+      <div class="card-body">
+        <div class="detail-block highlights">
+          <h3>Highlights</h3>
+          <ul>
+            <li>10–18 in. tall × 18–24 in. wide; tidy mounded habit</li>
+            <li>Dark purple flower spikes June–July</li>
+            <li>Semi-evergreen silver-gray foliage; provides off-season structure</li>
+            <li>South-facing full-sun exposure is the ideal microclimate for Zone 5a</li>
+            <li>Strongly aromatic; one of the most deer-avoided plants in any garden</li>
+          </ul>
+        </div>
+        <div class="detail-block pros">
+          <h3>Pros</h3>
+          <ul>
+            <li>Evergreen structure and silver foliage visible from the street year-round</li>
+            <li>Your south-facing bed maximizes its chances of overwintering</li>
+            <li>Compact 'Hidcote' is better-suited than larger varieties for front edging</li>
+            <li>Excellent deer deterrent — strongly aromatic</li>
+            <li>Pairs beautifully with the dark mulch; silver foliage pops</li>
+          </ul>
+        </div>
+        <div class="detail-block cons">
+          <h3>Cons</h3>
+          <ul>
+            <li>Lowest hardiness score in this plan — Zone 5 is its limit</li>
+            <li>Crown rot from wet mulch kills more lavender than cold; keep mulch away from the stem</li>
+            <li>Cannot cut into old wood — only trim by one-third in early spring</li>
+            <li>May partially die back after a harsh winter; assess in May before assuming dead</li>
+            <li>Needs excellent drainage — amend with sand/gravel if soil is heavy</li>
+          </ul>
+        </div>
+      </div>
+      <div class="price-strip">
+        <div class="price-tier pt-budget"><div class="price-tlabel">Budget</div><div class="price-amount">$13/ea</div><div class="price-tnote">plug / starter</div></div>
+        <div class="price-tier pt-mid"><div class="price-tlabel">Mid</div><div class="price-amount">$23/ea</div><div class="price-tnote">1 gal · Home Depot ~$24</div></div>
+        <div class="price-tier pt-premium"><div class="price-tlabel">Premium</div><div class="price-amount">$32/ea</div><div class="price-tnote">2 gal</div></div>
+      </div>
+      <div class="zone-bar">
+        <span>Zone <strong>5–8</strong></span>
+        <span>Sun <strong>Full — mandatory</strong></span>
+        <span>Type <strong>Evergreen sub-shrub</strong></span>
+        <span>Size <strong>10–18 in. × 18–24 in.</strong></span>
+      </div>
+    </div>
+
+    <!-- ===== J: CREEPING PHLOX ===== -->
+    <div class="plant-card">
+      <div class="card-header" style="background:#285038;">
+        <div class="card-header-left">
+          <h2>Creeping Phlox <span style="font-size:0.85rem;opacity:0.7;">(J)</span></h2>
+          <div class="scientific">Phlox subulata — 'Emerald Blue', 'Purple Beauty', or 'White Delight'</div>
+        </div>
+        <div class="hardiness-widget">
+          <div class="h-score">95</div>
+          <div class="h-bar-outer"><div class="h-bar-inner" style="width:95%;"></div></div>
+          <div class="h-label">Hardiness</div>
+          <div class="h-zone">Zone 3 — Excellent</div>
+        </div>
+      </div>
+      <div class="images-row">
+        <a href="https://en.wikipedia.org/wiki/Phlox_subulata" target="_blank" rel="noopener"><figure><img src="https://upload.wikimedia.org/wikipedia/commons/b/be/Phlox_subulata_Emerald_Blue_0zz.jpg" alt="Creeping phlox Emerald Blue carpet" loading="lazy"><figcaption>Emerald Blue carpet</figcaption></figure></a>
+        <a href="https://en.wikipedia.org/wiki/Phlox_subulata" target="_blank" rel="noopener"><figure><img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Phlox_subulata_Emerald_Blue_1zz.jpg" alt="Creeping phlox blue flowers close-up" loading="lazy"><figcaption>Flowers close-up</figcaption></figure></a>
+        <a href="https://en.wikipedia.org/wiki/Phlox_subulata" target="_blank" rel="noopener"><figure><img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Phlox_subulata_%27Daisy_Hill%27_2.JPG" alt="Creeping phlox Daisy Hill flower mat" loading="lazy"><figcaption>Phlox flower mat</figcaption></figure></a>
+      </div>
+      <div class="badges-row">
+        <span class="badge b-spring">Spring</span>
+        <span class="badge b-evergreen">Evergreen</span>
+        <span class="badge b-deer">Deer Resistant</span>
+        <span class="badge b-zone">Zone 3–9</span>
+      </div>
+      <div class="card-body">
+        <div class="detail-block highlights">
+          <h3>Highlights</h3>
+          <ul>
+            <li>4–6 in. tall × 18–24 in. wide; dense evergreen mat</li>
+            <li>Covered in blue, purple, or white flowers April–May (3–4 weeks)</li>
+            <li>Evergreen needle-like foliage provides year-round ground cover</li>
+            <li>Cascades beautifully over the curb edge</li>
+            <li>Excellent for suppressing weeds in the front zone</li>
+          </ul>
+        </div>
+        <div class="detail-block pros">
+          <h3>Pros</h3>
+          <ul>
+            <li>The only plant in this list that covers the front zone completely in spring bloom</li>
+            <li>Evergreen mat looks clean and manicured against dark mulch all year</li>
+            <li>Cold-hardy to Zone 3 — never an issue in Eastern Canada</li>
+            <li>Cascades over the curb for a polished, finished edge</li>
+            <li>Highly affordable; 4 plants cover the front strip well</li>
+          </ul>
+        </div>
+        <div class="detail-block cons">
+          <h3>Cons</h3>
+          <ul>
+            <li>Bloom period is short — 3 to 4 weeks only; no rebloom</li>
+            <li>Needs light shearing by one-third after bloom to prevent woodiness</li>
+            <li>Can get leggy and woody in the center after 4–5 years; divide to refresh</li>
+            <li>Avoid pink-red cultivars to stay within the no-red palette</li>
+          </ul>
+        </div>
+      </div>
+      <div class="price-strip">
+        <div class="price-tier pt-budget"><div class="price-tlabel">Budget</div><div class="price-amount">$8/ea</div><div class="price-tnote">3–4 in. pot</div></div>
+        <div class="price-tier pt-mid"><div class="price-tlabel">Mid</div><div class="price-amount">$18/ea</div><div class="price-tnote">1 gal · Halifax Perennials ~$14–18</div></div>
+        <div class="price-tier pt-premium"><div class="price-tlabel">Premium</div><div class="price-amount">$25/ea</div><div class="price-tnote">2 gal</div></div>
+      </div>
+      <div class="zone-bar">
+        <span>Zone <strong>3–9</strong></span>
+        <span>Sun <strong>Full</strong></span>
+        <span>Type <strong>Evergreen perennial</strong></span>
+        <span>Size <strong>4–6 in. × 18–24 in.</strong></span>
+      </div>
+    </div>
+
+    <!-- ===== K: SEDUM ANGELINA ===== -->
+    <div class="plant-card">
+      <div class="card-header" style="background:#4a5210;">
+        <div class="card-header-left">
+          <h2>Sedum 'Angelina' <span style="font-size:0.85rem;opacity:0.7;">(K)</span></h2>
+          <div class="scientific">Sedum rupestre 'Angelina'</div>
+        </div>
+        <div class="hardiness-widget">
+          <div class="h-score">96</div>
+          <div class="h-bar-outer"><div class="h-bar-inner" style="width:96%;"></div></div>
+          <div class="h-label">Hardiness</div>
+          <div class="h-zone">Zone 3 — Excellent</div>
+        </div>
+      </div>
+      <div class="images-row">
+        <a href="https://en.wikipedia.org/wiki/Sedum_rupestre" target="_blank" rel="noopener"><figure><img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Sedum_rupestre_Angelina_2zz.jpg" alt="Sedum Angelina gold groundcover mat" loading="lazy"><figcaption>Gold groundcover mat</figcaption></figure></a>
+        <a href="https://en.wikipedia.org/wiki/Sedum_rupestre" target="_blank" rel="noopener"><figure><img src="https://upload.wikimedia.org/wikipedia/commons/6/68/Sedum_rupestre_Angelina_1zz.jpg" alt="Angelina sedum gold foliage close-up" loading="lazy"><figcaption>Gold foliage close-up</figcaption></figure></a>
+        <a href="https://en.wikipedia.org/wiki/Sedum_rupestre" target="_blank" rel="noopener"><figure><img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Sedum_rupestre_%27Angelina%27_-_Tower_Hill_Botanic_Garden.jpg" alt="Angelina sedum at Tower Hill Botanic Garden" loading="lazy"><figcaption>Tower Hill Botanic Garden</figcaption></figure></a>
+      </div>
+      <div class="badges-row">
+        <span class="badge b-evergreen">Year-Round Foliage</span>
+        <span class="badge b-summer">Summer Flowers</span>
+        <span class="badge b-fall">Fall Color Shift</span>
+        <span class="badge b-deer">Deer Resistant</span>
+        <span class="badge b-zone">Zone 3–9</span>
+      </div>
+      <div class="card-body">
+        <div class="detail-block highlights">
+          <h3>Highlights</h3>
+          <ul>
+            <li>4–6 in. tall × 18–24 in. wide; evergreen groundcover</li>
+            <li>Gold-chartreuse foliage in spring/summer shifts to orange-bronze in fall and winter</li>
+            <li>Small yellow star flowers in June–July (secondary to the foliage)</li>
+            <li>Succulent; thick leaves unappealing to deer</li>
+            <li>Year-round foliage interest against dark brown mulch</li>
+          </ul>
+        </div>
+        <div class="detail-block pros">
+          <h3>Pros</h3>
+          <ul>
+            <li>Best year-round foliage of any front-zone plant in this list</li>
+            <li>Seasonal color shift from gold to burnt orange adds fall interest without flowers</li>
+            <li>Near-zero maintenance; drought tolerant and cold-hardy</li>
+            <li>Excellent drainage is its only requirement</li>
+            <li>Pops brilliantly against the dark brown/black mulch</li>
+          </ul>
+        </div>
+        <div class="detail-block cons">
+          <h3>Cons</h3>
+          <ul>
+            <li>Can spread and encroach on neighboring plants; trim edges annually</li>
+            <li>Requires excellent drainage — will rot in soggy soil</li>
+            <li>Flowers are small and secondary; not a dramatic bloomer</li>
+            <li>Very similar texture to the existing golden juniper; space them apart</li>
+          </ul>
+        </div>
+      </div>
+      <div class="price-strip">
+        <div class="price-tier pt-budget"><div class="price-tlabel">Budget</div><div class="price-amount">$8/ea</div><div class="price-tnote">plug / starter</div></div>
+        <div class="price-tier pt-mid"><div class="price-tlabel">Mid</div><div class="price-amount">$12/ea</div><div class="price-tnote">1 gal · Horlings NS ~$11</div></div>
+        <div class="price-tier pt-premium"><div class="price-tlabel">Premium</div><div class="price-amount">$20/ea</div><div class="price-tnote">2 gal</div></div>
+      </div>
+      <div class="zone-bar">
+        <span>Zone <strong>3–9</strong></span>
+        <span>Sun <strong>Full — best color in full sun</strong></span>
+        <span>Type <strong>Evergreen succulent</strong></span>
+        <span>Size <strong>4–6 in. × 18–24 in.</strong></span>
+      </div>
+    </div>
+
+    <!-- ===== L: BLUE STAR JUNIPER ===== -->
+    <div class="plant-card">
+      <div class="card-header" style="background:#183c3a;">
+        <div class="card-header-left">
+          <h2>Blue Star Juniper <span style="font-size:0.85rem;opacity:0.7;">(L)</span></h2>
+          <div class="scientific">Juniperus squamata 'Blue Star'</div>
+        </div>
+        <div class="hardiness-widget">
+          <div class="h-score">87</div>
+          <div class="h-bar-outer"><div class="h-bar-inner" style="width:87%;"></div></div>
+          <div class="h-label">Hardiness</div>
+          <div class="h-zone">Zone 4 — Very Good</div>
+        </div>
+      </div>
+      <div class="images-row">
+        <a href="https://en.wikipedia.org/wiki/Juniperus_squamata" target="_blank" rel="noopener"><figure><img src="https://upload.wikimedia.org/wikipedia/commons/7/71/Juniperus_squamata_Blue_Star_1zz.jpg" alt="Blue Star juniper full shrub habit" loading="lazy"><figcaption>Full shrub habit</figcaption></figure></a>
+        <a href="https://en.wikipedia.org/wiki/Juniperus_squamata" target="_blank" rel="noopener"><figure><img src="https://upload.wikimedia.org/wikipedia/commons/b/bf/Juniperus_squamata_%27Blue_star%27closeup2.jpg" alt="Blue Star juniper needle detail" loading="lazy"><figcaption>Steel-blue needle detail</figcaption></figure></a>
+        <a href="https://en.wikipedia.org/wiki/Juniperus_squamata" target="_blank" rel="noopener"><figure><img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Juniperus_squamata_%27Blue_Star%27.jpg" alt="Blue Star juniper in garden setting" loading="lazy"><figcaption>Garden specimen</figcaption></figure></a>
+      </div>
+      <div class="badges-row">
+        <span class="badge b-evergreen">Year-Round Structure</span>
+        <span class="badge b-deer">Deer Resistant</span>
+        <span class="badge b-zone">Zone 4–9</span>
+      </div>
+      <div class="card-body">
+        <div class="detail-block highlights">
+          <h3>Highlights</h3>
+          <ul>
+            <li>Slow growing; stays under 2 ft for many years, eventually 24–36 in.</li>
+            <li>Steel-blue needle foliage year-round — unique color in this planting</li>
+            <li>Prickly, resinous needles deter deer extremely effectively</li>
+            <li>Perfectly rounded mounding habit requires no pruning</li>
+            <li>Provides four-season structure as front-right anchor</li>
+          </ul>
+        </div>
+        <div class="detail-block pros">
+          <h3>Pros</h3>
+          <ul>
+            <li>Steel-blue is a striking color contrast against the warm-toned perennials</li>
+            <li>No maintenance — symmetrical and self-shaping</li>
+            <li>Slow growth keeps it in bounds for 10+ years</li>
+            <li>Excellent deer resistance from prickly texture and resinous scent</li>
+            <li>Year-round anchor point at the front-right corner of the bed</li>
+          </ul>
+        </div>
+        <div class="detail-block cons">
+          <h3>Cons</h3>
+          <ul>
+            <li>Very slow — starts small and takes years to make an impact</li>
+            <li>Will eventually exceed 2.5 ft, but this is many years away</li>
+            <li>Needs excellent drainage; susceptible to root rot in wet clay</li>
+            <li>Prickly texture makes weeding around it slightly awkward</li>
+          </ul>
+        </div>
+      </div>
+      <div class="price-strip">
+        <div class="price-tier pt-budget"><div class="price-tlabel">Budget</div><div class="price-amount">$40/ea</div><div class="price-tnote">2 gal (only size available)</div></div>
+        <div class="price-tier pt-mid"><div class="price-tlabel">Mid</div><div class="price-amount">$45/ea</div><div class="price-tnote">2 gal · Home Depot ~$40–45</div></div>
+        <div class="price-tier pt-premium"><div class="price-tlabel">Premium</div><div class="price-amount">$50/ea</div><div class="price-tnote">3 gal · specialty nursery</div></div>
+      </div>
+      <div class="zone-bar">
+        <span>Zone <strong>4–9</strong></span>
+        <span>Sun <strong>Full</strong></span>
+        <span>Type <strong>Evergreen shrub</strong></span>
+        <span>Size <strong>24–36 in. × 24–48 in. (slow)</strong></span>
+      </div>
+    </div>
+
+  </div><!-- /cards-section -->
+
+</main>
+
+<footer>
+  <p>Zone 5a = -20°F to -15°F minimum winter temperature. All prices in CAD. Eastern Canada retail estimates based on Home Depot Canada, PlantCentral.ca, Halifax Perennials, and Horlings Plants (NS).</p>
+</footer>
+
+</body>
+</html>
