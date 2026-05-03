@@ -402,143 +402,127 @@
           ======== BACK ZONE  (3 rows, 14 new plants) ========
           Tall 18–36 in.: Potentilla(A), Catmint(B), SedumAJ(C), Echinacea(D), HuskerRed(L), MissManners(M)
         -->
-        <!-- GJ#2 existing Golden Juniper — back-left near house -->
-        <circle cx="70"  cy="65" r="11" fill="#9a7a00" stroke="#fff" stroke-width="2" stroke-dasharray="3,2"/>
-        <text x="70"  y="69" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">&#9733;</text>
-
         <!--
-          BACK ZONE — spacing ~57, 4+5+5=14 plants
-          Row 1 y=75  (4): B(103) A(160) D(218) M(275)   — clears GJ#2, fills available width
-          Row 2 y=127 (5): B(80)  A(137) D(194) C(251) M(308)
-          Row 3 y=172 (5): B(103) L(160) L(218) C(276) M(333)
+          Circle radius = mature spread at 27 SVG units/ft (r=27 → 2 ft diameter, etc.)
+          Radii: GJ/CJ=40(3ft groomed) | A=34(30") | B=24(21") | C=27(24") | D=24(21")
+                 E=24(21") | F=24(21") | G=27(24") | H=15(13") | I=34(30") | J=24(21")
+                 K=19(17") | L=20(18") | M=30(27") | N=17(15") | O=24(21") | P=37(33")
+                 Q=17(15") | Lav=34(30")
+          All circles rendered first; all labels rendered on top.
         -->
-        <!-- row 1 y=75 -->
-        <circle cx="103" cy="75"  r="14" fill="#5a4080" stroke="#fff" stroke-width="1.8"/>
-        <text x="103" y="80"  text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">B</text>
-        <circle cx="160" cy="75"  r="14" fill="#4a6820" stroke="#fff" stroke-width="1.8"/>
-        <text x="160" y="80"  text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">A</text>
-        <circle cx="218" cy="75"  r="14" fill="#884068" stroke="#fff" stroke-width="1.8"/>
-        <text x="218" y="80"  text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">D</text>
-        <circle cx="275" cy="75"  r="14" fill="#5a6870" stroke="#fff" stroke-width="1.8"/>
-        <text x="275" y="80"  text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">M</text>
 
-        <!-- row 2 y=127 -->
-        <circle cx="80"  cy="127" r="14" fill="#5a4080" stroke="#fff" stroke-width="1.8"/>
-        <text x="80"  y="132" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">B</text>
-        <circle cx="137" cy="127" r="14" fill="#4a6820" stroke="#fff" stroke-width="1.8"/>
-        <text x="137" y="132" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">A</text>
-        <circle cx="194" cy="127" r="14" fill="#884068" stroke="#fff" stroke-width="1.8"/>
-        <text x="194" y="132" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">D</text>
-        <circle cx="251" cy="127" r="14" fill="#7a3a18" stroke="#fff" stroke-width="1.8"/>
-        <text x="251" y="132" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">C</text>
-        <circle cx="308" cy="127" r="14" fill="#5a6870" stroke="#fff" stroke-width="1.8"/>
-        <text x="308" y="132" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">M</text>
+        <!-- ====== CIRCLES ====== -->
+        <!-- GJ#2 existing -->
+        <circle cx="70"  cy="65"  r="40" fill="#9a7a00" fill-opacity="0.78" stroke="#fff" stroke-width="2"   stroke-dasharray="3,2"/>
+        <!-- back row 1 -->
+        <circle cx="103" cy="75"  r="24" fill="#5a4080" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <circle cx="160" cy="75"  r="34" fill="#4a6820" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <circle cx="218" cy="75"  r="24" fill="#884068" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <circle cx="275" cy="75"  r="30" fill="#5a6870" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <!-- back row 2 -->
+        <circle cx="80"  cy="127" r="24" fill="#5a4080" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <circle cx="137" cy="127" r="34" fill="#4a6820" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <circle cx="194" cy="127" r="24" fill="#884068" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <circle cx="251" cy="127" r="27" fill="#7a3a18" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <circle cx="308" cy="127" r="30" fill="#5a6870" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <!-- back row 3 -->
+        <circle cx="103" cy="172" r="24" fill="#5a4080" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <circle cx="160" cy="172" r="20" fill="#5a1818" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <circle cx="218" cy="172" r="20" fill="#5a1818" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <circle cx="276" cy="172" r="27" fill="#7a3a18" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <circle cx="333" cy="172" r="30" fill="#5a6870" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <!-- middle row 1 -->
+        <circle cx="80"  cy="220" r="24" fill="#3858a0" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <circle cx="145" cy="220" r="24" fill="#284a80" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <circle cx="210" cy="220" r="27" fill="#786018" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <circle cx="275" cy="220" r="15" fill="#583870" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <circle cx="340" cy="220" r="37" fill="#a07820" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <!-- middle row 2 -->
+        <circle cx="113" cy="275" r="24" fill="#3858a0" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <circle cx="178" cy="275" r="27" fill="#786018" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <circle cx="243" cy="275" r="15" fill="#583870" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <circle cx="308" cy="275" r="24" fill="#283878" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <circle cx="373" cy="275" r="37" fill="#a07820" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <!-- middle row 3 -->
+        <circle cx="80"  cy="325" r="34" fill="#7a5898" fill-opacity="0.78" stroke="#fff" stroke-width="2"   stroke-dasharray="3,2"/>
+        <circle cx="134" cy="325" r="17" fill="#2a3878" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <circle cx="175" cy="325" r="27" fill="#786018" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <circle cx="230" cy="325" r="34" fill="#7a5898" fill-opacity="0.78" stroke="#fff" stroke-width="2"   stroke-dasharray="3,2"/>
+        <circle cx="305" cy="325" r="24" fill="#283878" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <circle cx="380" cy="325" r="34" fill="#7a5898" fill-opacity="0.78" stroke="#fff" stroke-width="2"   stroke-dasharray="3,2"/>
+        <!-- front: GJ#1 existing -->
+        <circle cx="82"  cy="370" r="40" fill="#9a7a00" fill-opacity="0.78" stroke="#fff" stroke-width="2"   stroke-dasharray="3,2"/>
+        <!-- front row 1 -->
+        <circle cx="132" cy="370" r="17" fill="#883058" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <circle cx="197" cy="370" r="24" fill="#788018" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <circle cx="261" cy="370" r="19" fill="#b84820" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <circle cx="326" cy="370" r="17" fill="#883058" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <circle cx="390" cy="370" r="24" fill="#788018" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <!-- front row 2 -->
+        <circle cx="107" cy="415" r="34" fill="#3a6848" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <circle cx="167" cy="415" r="17" fill="#883058" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <circle cx="227" cy="415" r="24" fill="#788018" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <circle cx="287" cy="415" r="19" fill="#b84820" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <circle cx="347" cy="415" r="17" fill="#883058" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <circle cx="407" cy="415" r="34" fill="#3a6848" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <!-- front row 3 -->
+        <circle cx="82"  cy="462" r="34" fill="#3a6848" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <circle cx="141" cy="462" r="40" fill="#3a5830" fill-opacity="0.78" stroke="#fff" stroke-width="2"   stroke-dasharray="3,2"/>
+        <circle cx="214" cy="462" r="34" fill="#3a6848" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <circle cx="287" cy="462" r="34" fill="#3a6848" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <circle cx="359" cy="462" r="40" fill="#3a5830" fill-opacity="0.78" stroke="#fff" stroke-width="2"   stroke-dasharray="3,2"/>
+        <circle cx="418" cy="462" r="34" fill="#3a6848" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
 
-        <!-- row 3 y=172 -->
-        <circle cx="103" cy="172" r="14" fill="#5a4080" stroke="#fff" stroke-width="1.8"/>
-        <text x="103" y="177" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">B</text>
-        <circle cx="160" cy="172" r="14" fill="#5a1818" stroke="#fff" stroke-width="1.8"/>
-        <text x="160" y="177" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">L</text>
-        <circle cx="218" cy="172" r="14" fill="#5a1818" stroke="#fff" stroke-width="1.8"/>
-        <text x="218" y="177" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">L</text>
-        <circle cx="276" cy="172" r="14" fill="#7a3a18" stroke="#fff" stroke-width="1.8"/>
-        <text x="276" y="177" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">C</text>
-        <circle cx="333" cy="172" r="14" fill="#5a6870" stroke="#fff" stroke-width="1.8"/>
-        <text x="333" y="177" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">M</text>
-
-        <!--
-          MIDDLE ZONE — spacing ~65, 5+5+(3 new+3 Lav)=13 new
-          Row 1 y=220 (5): O(80)  E(145) G(210) H(275) P(340)
-          Row 2 y=275 (5): O(113) G(178) H(243) F(308) P(373)
-          Row 3 y=325:     Lav(80) N(134) G(175) Lav(230) F(305) Lav(380)
-        -->
-        <!-- row 1 y=220 -->
-        <circle cx="80"  cy="220" r="14" fill="#3858a0" stroke="#fff" stroke-width="1.8"/>
-        <text x="80"  y="225" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">O</text>
-        <circle cx="145" cy="220" r="14" fill="#284a80" stroke="#fff" stroke-width="1.8"/>
-        <text x="145" y="225" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">E</text>
-        <circle cx="210" cy="220" r="14" fill="#786018" stroke="#fff" stroke-width="1.8"/>
-        <text x="210" y="225" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">G</text>
-        <circle cx="275" cy="220" r="14" fill="#583870" stroke="#fff" stroke-width="1.8"/>
-        <text x="275" y="225" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">H</text>
-        <circle cx="340" cy="220" r="14" fill="#a07820" stroke="#fff" stroke-width="1.8"/>
-        <text x="340" y="225" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">P</text>
-
-        <!-- row 2 y=275 -->
-        <circle cx="113" cy="275" r="14" fill="#3858a0" stroke="#fff" stroke-width="1.8"/>
-        <text x="113" y="280" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">O</text>
-        <circle cx="178" cy="275" r="14" fill="#786018" stroke="#fff" stroke-width="1.8"/>
-        <text x="178" y="280" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">G</text>
-        <circle cx="243" cy="275" r="14" fill="#583870" stroke="#fff" stroke-width="1.8"/>
-        <text x="243" y="280" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">H</text>
-        <circle cx="308" cy="275" r="14" fill="#283878" stroke="#fff" stroke-width="1.8"/>
-        <text x="308" y="280" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">F</text>
-        <circle cx="373" cy="275" r="14" fill="#a07820" stroke="#fff" stroke-width="1.8"/>
-        <text x="373" y="280" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">P</text>
-
-        <!-- row 3 y=325 — Lav×3 existing at 80/230/380; N at 134, G at 175, F at 305 fit between -->
-        <circle cx="80"  cy="325" r="13" fill="#7a5898" stroke="#fff" stroke-width="2" stroke-dasharray="3,2"/>
-        <text x="80"  y="329" text-anchor="middle" font-size="8" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">Lav</text>
-        <circle cx="134" cy="325" r="14" fill="#2a3878" stroke="#fff" stroke-width="1.8"/>
-        <text x="134" y="330" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">N</text>
-        <circle cx="175" cy="325" r="14" fill="#786018" stroke="#fff" stroke-width="1.8"/>
-        <text x="175" y="330" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">G</text>
-        <circle cx="230" cy="325" r="13" fill="#7a5898" stroke="#fff" stroke-width="2" stroke-dasharray="3,2"/>
-        <text x="230" y="329" text-anchor="middle" font-size="8" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">Lav</text>
-        <circle cx="305" cy="325" r="14" fill="#283878" stroke="#fff" stroke-width="1.8"/>
-        <text x="305" y="330" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">F</text>
-        <circle cx="380" cy="325" r="13" fill="#7a5898" stroke="#fff" stroke-width="2" stroke-dasharray="3,2"/>
-        <text x="380" y="329" text-anchor="middle" font-size="8" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">Lav</text>
-
-        <!--
-          FRONT ZONE — spacing ~65 rows 1-2, CJ×2 inset 3 ft
-          Row 1 y=370 (5 new): GJ#1(82) Q(132) J(197) K(261) Q(326) J(390)
-          Row 2 y=415 (6 new): I(107)   Q(167) J(227) K(287) Q(347) I(407)
-          Row 3 y=462 (4 new): I(82) CJ(141) I(214) I(287) CJ(359) I(418)
-        -->
-        <!-- GJ#1 existing Golden Juniper — front-left anchor -->
-        <circle cx="82"  cy="370" r="15" fill="#9a7a00" stroke="#fff" stroke-width="2" stroke-dasharray="3,2"/>
-        <text x="82"  y="375" text-anchor="middle" font-size="12" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">&#9733;</text>
-
-        <!-- row 1 y=370 -->
-        <circle cx="132" cy="370" r="13" fill="#883058" stroke="#fff" stroke-width="1.8"/>
-        <text x="132" y="375" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">Q</text>
-        <circle cx="197" cy="370" r="13" fill="#788018" stroke="#fff" stroke-width="1.8"/>
-        <text x="197" y="375" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">J</text>
-        <circle cx="261" cy="370" r="13" fill="#b84820" stroke="#fff" stroke-width="1.8"/>
-        <text x="261" y="375" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">K</text>
-        <circle cx="326" cy="370" r="13" fill="#883058" stroke="#fff" stroke-width="1.8"/>
-        <text x="326" y="375" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">Q</text>
-        <circle cx="390" cy="370" r="13" fill="#788018" stroke="#fff" stroke-width="1.8"/>
-        <text x="390" y="375" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">J</text>
-
-        <!-- row 2 y=415 -->
-        <circle cx="107" cy="415" r="13" fill="#3a6848" stroke="#fff" stroke-width="1.8"/>
-        <text x="107" y="420" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">I</text>
-        <circle cx="167" cy="415" r="13" fill="#883058" stroke="#fff" stroke-width="1.8"/>
-        <text x="167" y="420" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">Q</text>
-        <circle cx="227" cy="415" r="13" fill="#788018" stroke="#fff" stroke-width="1.8"/>
-        <text x="227" y="420" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">J</text>
-        <circle cx="287" cy="415" r="13" fill="#b84820" stroke="#fff" stroke-width="1.8"/>
-        <text x="287" y="420" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">K</text>
-        <circle cx="347" cy="415" r="13" fill="#883058" stroke="#fff" stroke-width="1.8"/>
-        <text x="347" y="420" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">Q</text>
-        <circle cx="407" cy="415" r="13" fill="#3a6848" stroke="#fff" stroke-width="1.8"/>
-        <text x="407" y="420" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">I</text>
-
-        <!-- row 3 y=462 — CJ×2 at cx=141 and cx=359; I(82/418) outside, I(214/287) between -->
-        <circle cx="82"  cy="462" r="13" fill="#3a6848" stroke="#fff" stroke-width="1.8"/>
-        <text x="82"  y="467" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">I</text>
-        <circle cx="141" cy="462" r="13" fill="#3a5830" stroke="#fff" stroke-width="2" stroke-dasharray="3,2"/>
-        <text x="141" y="466" text-anchor="middle" font-size="8" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">CJ</text>
-        <circle cx="214" cy="462" r="13" fill="#3a6848" stroke="#fff" stroke-width="1.8"/>
-        <text x="214" y="467" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">I</text>
-        <circle cx="287" cy="462" r="13" fill="#3a6848" stroke="#fff" stroke-width="1.8"/>
-        <text x="287" y="467" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">I</text>
-        <circle cx="359" cy="462" r="13" fill="#3a5830" stroke="#fff" stroke-width="2" stroke-dasharray="3,2"/>
-        <text x="359" y="466" text-anchor="middle" font-size="8" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">CJ</text>
-        <circle cx="418" cy="462" r="13" fill="#3a6848" stroke="#fff" stroke-width="1.8"/>
-        <text x="418" y="467" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">I</text>
+        <!-- ====== LABELS (always on top) ====== -->
+        <text x="70"  y="69"  text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">&#9733;</text>
+        <text x="103" y="79"  text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">B</text>
+        <text x="160" y="79"  text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">A</text>
+        <text x="218" y="79"  text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">D</text>
+        <text x="275" y="79"  text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">M</text>
+        <text x="80"  y="131" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">B</text>
+        <text x="137" y="131" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">A</text>
+        <text x="194" y="131" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">D</text>
+        <text x="251" y="131" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">C</text>
+        <text x="308" y="131" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">M</text>
+        <text x="103" y="176" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">B</text>
+        <text x="160" y="176" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">L</text>
+        <text x="218" y="176" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">L</text>
+        <text x="276" y="176" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">C</text>
+        <text x="333" y="176" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">M</text>
+        <text x="80"  y="224" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">O</text>
+        <text x="145" y="224" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">E</text>
+        <text x="210" y="224" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">G</text>
+        <text x="275" y="224" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">H</text>
+        <text x="340" y="224" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">P</text>
+        <text x="113" y="279" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">O</text>
+        <text x="178" y="279" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">G</text>
+        <text x="243" y="279" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">H</text>
+        <text x="308" y="279" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">F</text>
+        <text x="373" y="279" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">P</text>
+        <text x="80"  y="329" text-anchor="middle" font-size="8"  font-family="Arial,sans-serif" fill="#fff" font-weight="bold">Lav</text>
+        <text x="134" y="329" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">N</text>
+        <text x="175" y="329" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">G</text>
+        <text x="230" y="329" text-anchor="middle" font-size="8"  font-family="Arial,sans-serif" fill="#fff" font-weight="bold">Lav</text>
+        <text x="305" y="329" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">F</text>
+        <text x="380" y="329" text-anchor="middle" font-size="8"  font-family="Arial,sans-serif" fill="#fff" font-weight="bold">Lav</text>
+        <text x="82"  y="374" text-anchor="middle" font-size="12" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">&#9733;</text>
+        <text x="132" y="374" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">Q</text>
+        <text x="197" y="374" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">J</text>
+        <text x="261" y="374" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">K</text>
+        <text x="326" y="374" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">Q</text>
+        <text x="390" y="374" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">J</text>
+        <text x="107" y="419" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">I</text>
+        <text x="167" y="419" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">Q</text>
+        <text x="227" y="419" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">J</text>
+        <text x="287" y="419" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">K</text>
+        <text x="347" y="419" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">Q</text>
+        <text x="407" y="419" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">I</text>
+        <text x="82"  y="466" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">I</text>
+        <text x="141" y="466" text-anchor="middle" font-size="8"  font-family="Arial,sans-serif" fill="#fff" font-weight="bold">CJ</text>
+        <text x="214" y="466" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">I</text>
+        <text x="287" y="466" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">I</text>
+        <text x="359" y="466" text-anchor="middle" font-size="8"  font-family="Arial,sans-serif" fill="#fff" font-weight="bold">CJ</text>
+        <text x="418" y="466" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">I</text>
 
       </svg>
       <div class="map-label map-label-curb">Curb / Street Edge &mdash; front edge 4.26 m (widest point)</div>
