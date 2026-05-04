@@ -402,107 +402,98 @@
 
         <!--
           ======== BACK ZONE  (3 rows, 14 new plants) ========
-          Tall 18–36 in.: Potentilla(A), Catmint(B), SedumAJ(C), Echinacea(D), HuskerRed(L), MissManners(M)
+          Tall 18-36 in.: Potentilla(A), Catmint(B), SedumAJ(C), Echinacea(D), HuskerRed(L), MissManners(M)
         -->
         <!--
-          Circle radius = mature spread at 27 SVG units/ft (r=27 → 2 ft diameter, etc.)
-          All circles clipped to bed boundary — spread shown at full size, no overflow.
+          Circle radius = mature spread at 27 SVG units/ft.
           Radii: GJ/CJ=40(3ft groomed) | A=34(30") | B=24(21") | C=27(24") | D=24(21")
                  E=24(21") | F=24(21") | G=27(24") | H=15(13") | I=34(30") | J=24(21")
                  K=19(17") | L=20(18") | M=30(27") | N=17(15") | O=24(21") | P=37(33")
                  Q=17(15") | Lav=34(30")
+          GJ and CJ are fixed anchors. New plant centers are placed outside each anchor's
+          exclusion zone (anchor_r + new_plant_r minimum center-to-center distance).
           All circles rendered first; all labels rendered on top.
         -->
 
-        <defs>
-          <clipPath id="bedClip">
-            <path d="M 60,50 L 278,50 Q 420,271 443,492 L 60,492 Z"/>
-          </clipPath>
-        </defs>
-
-        <!-- ====== CIRCLES (clipped to bed boundary) ====== -->
-        <g clip-path="url(#bedClip)">
-        <!-- GJ#2 existing -->
+        <!-- ====== CIRCLES ====== -->
+        <!-- GJ#2 existing — back-left corner near house -->
         <circle cx="70"  cy="65"  r="40" fill="#c8a820" fill-opacity="0.78" stroke="#fff" stroke-width="2"   stroke-dasharray="3,2"/>
-        <!-- back row 1: M·A·D·B -->
-        <circle cx="103" cy="75"  r="30" fill="#d0cce8" fill-opacity="0.78" stroke="#bbb" stroke-width="1.8"/>
-        <circle cx="160" cy="75"  r="34" fill="#f5c030" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
-        <circle cx="218" cy="75"  r="24" fill="#c060b0" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
-        <circle cx="275" cy="75"  r="24" fill="#8878c8" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
-        <!-- back row 2: M·A·D·C·B -->
-        <circle cx="80"  cy="127" r="30" fill="#d0cce8" fill-opacity="0.78" stroke="#bbb" stroke-width="1.8"/>
-        <circle cx="137" cy="127" r="34" fill="#f5c030" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
-        <circle cx="194" cy="127" r="24" fill="#c060b0" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
-        <circle cx="251" cy="127" r="27" fill="#c87090" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
-        <circle cx="308" cy="127" r="24" fill="#8878c8" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
-        <!-- back row 3: M·L·L·C·B -->
-        <circle cx="103" cy="172" r="30" fill="#d0cce8" fill-opacity="0.78" stroke="#bbb" stroke-width="1.8"/>
-        <circle cx="160" cy="172" r="20" fill="#8c2828" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
-        <circle cx="218" cy="172" r="20" fill="#8c2828" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
-        <circle cx="276" cy="172" r="27" fill="#c87090" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
-        <circle cx="333" cy="172" r="24" fill="#8878c8" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
-        <!-- middle row 1: O·E·G·H·P -->
+        <!-- back row 1 (y=75): A·D·B — starts right of GJ#2 exclusion zone -->
+        <circle cx="145" cy="75"  r="34" fill="#f5c030" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <circle cx="202" cy="75"  r="24" fill="#c060b0" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <circle cx="259" cy="75"  r="24" fill="#8878c8" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <!-- back row 2 (y=127): M·A·D·C·B — staggered; M just clears GJ#2 exclusion zone -->
+        <circle cx="104" cy="127" r="30" fill="#d0cce8" fill-opacity="0.78" stroke="#bbb" stroke-width="1.8"/>
+        <circle cx="160" cy="127" r="34" fill="#f5c030" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <circle cx="215" cy="127" r="24" fill="#c060b0" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <circle cx="262" cy="127" r="27" fill="#c87090" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <circle cx="302" cy="127" r="24" fill="#8878c8" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <!-- back row 3 (y=172): M·M·L·L·C·B — full width, no GJ exclusion -->
+        <circle cx="80"  cy="172" r="30" fill="#d0cce8" fill-opacity="0.78" stroke="#bbb" stroke-width="1.8"/>
+        <circle cx="138" cy="172" r="30" fill="#d0cce8" fill-opacity="0.78" stroke="#bbb" stroke-width="1.8"/>
+        <circle cx="192" cy="172" r="20" fill="#8c2828" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <circle cx="244" cy="172" r="20" fill="#8c2828" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <circle cx="290" cy="172" r="27" fill="#c87090" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <circle cx="330" cy="172" r="24" fill="#8878c8" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <!-- middle row 1 (y=220): O·E·G·H·P -->
         <circle cx="80"  cy="220" r="24" fill="#6878d0" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
         <circle cx="145" cy="220" r="24" fill="#8090d8" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
         <circle cx="210" cy="220" r="27" fill="#e8d820" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
         <circle cx="275" cy="220" r="15" fill="#b060a0" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
         <circle cx="340" cy="220" r="37" fill="#e08030" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
-        <!-- middle row 2: O·G·H·F·P -->
+        <!-- middle row 2 (y=275): O·G·H·F·P -->
         <circle cx="113" cy="275" r="24" fill="#6878d0" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
         <circle cx="178" cy="275" r="27" fill="#e8d820" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
         <circle cx="243" cy="275" r="15" fill="#b060a0" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
         <circle cx="308" cy="275" r="24" fill="#4858c0" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
         <circle cx="373" cy="275" r="37" fill="#e08030" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
-        <!-- middle row 3: Lav·N·G·Lav·F·Lav -->
+        <!-- middle row 3 (y=325): Lav·N·G·Lav·F·Lav -->
         <circle cx="80"  cy="325" r="34" fill="#a888c8" fill-opacity="0.78" stroke="#fff" stroke-width="2"   stroke-dasharray="3,2"/>
         <circle cx="134" cy="325" r="17" fill="#5060c8" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
         <circle cx="175" cy="325" r="27" fill="#e8d820" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
         <circle cx="230" cy="325" r="34" fill="#a888c8" fill-opacity="0.78" stroke="#fff" stroke-width="2"   stroke-dasharray="3,2"/>
         <circle cx="305" cy="325" r="24" fill="#4858c0" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
         <circle cx="380" cy="325" r="34" fill="#a888c8" fill-opacity="0.78" stroke="#fff" stroke-width="2"   stroke-dasharray="3,2"/>
-        <!-- front: GJ#1 existing -->
+        <!-- GJ#1 existing — front-left anchor -->
         <circle cx="82"  cy="378" r="40" fill="#c8a820" fill-opacity="0.78" stroke="#fff" stroke-width="2"   stroke-dasharray="3,2"/>
-        <!-- front row 1: Q·J·K·Q·J -->
-        <circle cx="132" cy="370" r="17" fill="#d83080" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <!-- front row 1 (y=370): Q·J·K·Q·J — starts right of GJ#1 exclusion zone -->
+        <circle cx="140" cy="370" r="17" fill="#d83080" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
         <circle cx="197" cy="370" r="24" fill="#c0d030" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
-        <circle cx="261" cy="370" r="19" fill="#e05018" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
-        <circle cx="326" cy="370" r="17" fill="#d83080" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
-        <circle cx="390" cy="370" r="24" fill="#c0d030" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
-        <!-- CJ existing — outer corners of front zone -->
-        <circle cx="78"  cy="440" r="40" fill="#5a8060" fill-opacity="0.78" stroke="#fff" stroke-width="2"   stroke-dasharray="3,2"/>
-        <circle cx="420" cy="440" r="40" fill="#5a8060" fill-opacity="0.78" stroke="#fff" stroke-width="2"   stroke-dasharray="3,2"/>
-        <!-- front row 2: I·Q·J·K·Q·I -->
-        <circle cx="107" cy="415" r="34" fill="#d068b8" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
-        <circle cx="167" cy="415" r="17" fill="#d83080" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
-        <circle cx="227" cy="415" r="24" fill="#c0d030" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
-        <circle cx="287" cy="415" r="19" fill="#e05018" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
-        <circle cx="347" cy="415" r="17" fill="#d83080" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
-        <circle cx="407" cy="415" r="34" fill="#d068b8" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
-        <!-- front row 3: I·I·I·I·I·I -->
-        <circle cx="82"  cy="462" r="34" fill="#d068b8" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
-        <circle cx="141" cy="462" r="34" fill="#d068b8" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
-        <circle cx="214" cy="462" r="34" fill="#d068b8" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
-        <circle cx="287" cy="462" r="34" fill="#d068b8" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
-        <circle cx="359" cy="462" r="34" fill="#d068b8" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
-        <circle cx="418" cy="462" r="34" fill="#d068b8" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
-        </g>
+        <circle cx="255" cy="370" r="19" fill="#e05018" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <circle cx="313" cy="370" r="17" fill="#d83080" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <circle cx="371" cy="370" r="24" fill="#c0d030" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <!-- CJ existing — bottom corners of bed -->
+        <circle cx="65"  cy="475" r="40" fill="#5a8060" fill-opacity="0.78" stroke="#fff" stroke-width="2"   stroke-dasharray="3,2"/>
+        <circle cx="432" cy="475" r="40" fill="#5a8060" fill-opacity="0.78" stroke="#fff" stroke-width="2"   stroke-dasharray="3,2"/>
+        <!-- front row 2 (y=415): I·Q·J·K·Q·I — clear of GJ#1 and both CJ corners -->
+        <circle cx="147" cy="415" r="34" fill="#d068b8" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <circle cx="203" cy="415" r="17" fill="#d83080" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <circle cx="257" cy="415" r="24" fill="#c0d030" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <circle cx="312" cy="415" r="19" fill="#e05018" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <circle cx="367" cy="415" r="17" fill="#d83080" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <circle cx="387" cy="415" r="34" fill="#d068b8" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <!-- front row 3 (y=462): I·I·I·I — clear of both CJ corners -->
+        <circle cx="138" cy="462" r="34" fill="#d068b8" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <circle cx="211" cy="462" r="34" fill="#d068b8" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <circle cx="284" cy="462" r="34" fill="#d068b8" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
+        <circle cx="356" cy="462" r="34" fill="#d068b8" fill-opacity="0.78" stroke="#fff" stroke-width="1.8"/>
 
         <!-- ====== LABELS (always on top) ====== -->
         <text x="70"  y="69"  text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">&#9733;</text>
-        <text x="103" y="79"  text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#555" font-weight="bold">M</text>
-        <text x="160" y="79"  text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">A</text>
-        <text x="218" y="79"  text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">D</text>
-        <text x="275" y="79"  text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">B</text>
-        <text x="80"  y="131" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#555" font-weight="bold">M</text>
-        <text x="137" y="131" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">A</text>
-        <text x="194" y="131" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">D</text>
-        <text x="251" y="131" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">C</text>
-        <text x="308" y="131" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">B</text>
-        <text x="103" y="176" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#555" font-weight="bold">M</text>
-        <text x="160" y="176" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">L</text>
-        <text x="218" y="176" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">L</text>
-        <text x="276" y="176" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">C</text>
-        <text x="333" y="176" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">B</text>
+        <text x="145" y="79"  text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">A</text>
+        <text x="202" y="79"  text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">D</text>
+        <text x="259" y="79"  text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">B</text>
+        <text x="104" y="131" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#555" font-weight="bold">M</text>
+        <text x="160" y="131" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">A</text>
+        <text x="215" y="131" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">D</text>
+        <text x="262" y="131" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">C</text>
+        <text x="302" y="131" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">B</text>
+        <text x="80"  y="176" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#555" font-weight="bold">M</text>
+        <text x="138" y="176" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#555" font-weight="bold">M</text>
+        <text x="192" y="176" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">L</text>
+        <text x="244" y="176" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">L</text>
+        <text x="290" y="176" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">C</text>
+        <text x="330" y="176" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">B</text>
         <text x="80"  y="224" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">O</text>
         <text x="145" y="224" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">E</text>
         <text x="210" y="224" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">G</text>
@@ -520,32 +511,30 @@
         <text x="305" y="329" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">F</text>
         <text x="380" y="329" text-anchor="middle" font-size="8"  font-family="Arial,sans-serif" fill="#fff" font-weight="bold">Lav</text>
         <text x="82"  y="382" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">&#9733;</text>
-        <text x="132" y="374" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">Q</text>
+        <text x="140" y="374" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">Q</text>
         <text x="197" y="374" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">J</text>
-        <text x="261" y="374" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">K</text>
-        <text x="326" y="374" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">Q</text>
-        <text x="390" y="374" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">J</text>
-        <text x="107" y="419" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">I</text>
-        <text x="167" y="419" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">Q</text>
-        <text x="227" y="419" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">J</text>
-        <text x="287" y="419" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">K</text>
-        <text x="347" y="419" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">Q</text>
-        <text x="407" y="419" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">I</text>
-        <text x="82"  y="466" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">I</text>
-        <text x="141" y="466" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">I</text>
-        <text x="214" y="466" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">I</text>
-        <text x="287" y="466" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">I</text>
-        <text x="359" y="466" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">I</text>
-        <text x="418" y="466" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">I</text>
-        <text x="78"  y="444" text-anchor="middle" font-size="7"  font-family="Arial,sans-serif" fill="#fff" font-weight="bold">CJ</text>
-        <text x="420" y="444" text-anchor="middle" font-size="7"  font-family="Arial,sans-serif" fill="#fff" font-weight="bold">CJ</text>
+        <text x="255" y="374" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">K</text>
+        <text x="313" y="374" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">Q</text>
+        <text x="371" y="374" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">J</text>
+        <text x="65"  y="479" text-anchor="middle" font-size="7"  font-family="Arial,sans-serif" fill="#fff" font-weight="bold">CJ</text>
+        <text x="432" y="479" text-anchor="middle" font-size="7"  font-family="Arial,sans-serif" fill="#fff" font-weight="bold">CJ</text>
+        <text x="147" y="419" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">I</text>
+        <text x="203" y="419" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">Q</text>
+        <text x="257" y="419" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">J</text>
+        <text x="312" y="419" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">K</text>
+        <text x="367" y="419" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">Q</text>
+        <text x="387" y="419" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">I</text>
+        <text x="138" y="466" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">I</text>
+        <text x="211" y="466" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">I</text>
+        <text x="284" y="466" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">I</text>
+        <text x="356" y="466" text-anchor="middle" font-size="11" font-family="Arial,sans-serif" fill="#fff" font-weight="bold">I</text>
 
       </svg>
       <div class="map-label map-label-curb">Curb / Street Edge &mdash; front edge 4.26 m (widest point)</div>
     </div>
 
     <div class="design-rationale">
-      <strong>Design rationale:</strong> The bed narrows toward the house (2.42 m) and opens toward the curb (4.26 m), with a uniform triangular stagger grid throughout — odd rows start flush left, even rows offset by half a column — so plants extend to the full available width at every depth. Back zone: Miss Manners (M) anchors the left side as a three-plant triangle spanning all three rows; Catmint (B) mirrors it in the right corner as another triangle; Echinacea (D), Potentilla (A), Sedum Autumn Joy (C), and Husker Red (L) each appear as diagonal or in-row pairs, every plant adjacent to its own species. Middle zone: Yarrow (G) runs a tight three-plant triangle as a recurring gold thread through all three rows; Agastache (O), Allium (H), Helenium (P), and Salvia (F) each appear as adjacent diagonal pairs for rhythmic repetition; the three existing English Lavenders space evenly across row 3, with Russian Sage and Wild Lupin as singletons between them. Front zone: Gaillardia (K) and Sedum Angelina (J) pair diagonally across rows 1 and 2; Dianthus (Q) repeats as two mirrored pairs for visible pink rhythm from the road; Creeping Phlox (I) sweeps the full curb row in an unbroken line of six plants and brackets the outer edges of row 2. Both existing Creeping Junipers (CJ) are shown at the outer corners of the front zone, flanking the bed rather than occupying a planting row.
+      <strong>Design rationale:</strong> The existing woody plants define the spatial logic. Golden Juniper #2 (back-left, near house) occupies its corner and pushes back row 1 rightward; rows 2 and 3 fill in as the exclusion zone clears. Golden Juniper #1 anchors the front-left transition point. Both Creeping Junipers hold the bottom corners of the bed as low-spreading flankers, their spread extending outward beyond the bed perimeter. Every new plant center is placed outside the combined spread radius of the nearest existing anchor. Back zone: Miss Manners (M) forms a diagonal triangle across rows 2 and 3, tight against GJ#2; Catmint (B) mirrors it as a three-plant diagonal through all three rows on the right; Potentilla (A) and Echinacea (D) pair diagonally across rows 1 and 2; Sedum Autumn Joy (C) and Husker Red (L) pair diagonally across rows 2 and 3. Middle zone: Yarrow (G) runs a three-plant triangle across all three rows as a recurring gold thread; Agastache (O), Allium (H), Helenium (P), and Salvia (F) each appear as adjacent diagonal pairs; the three existing English Lavenders space evenly across row 3, with Russian Sage and Wild Lupin as singletons. Front zone: plants start to the right of GJ#1's exclusion boundary; Gaillardia (K) and Sedum Angelina (J) pair diagonally across rows 1 and 2; Dianthus (Q) repeats as two mirrored pairs for visible pink rhythm from the road; Creeping Phlox (I) brackets row 2 on both ends and sweeps row 3 as four evenly-spaced plants between the CJ corners.
     </div>
 
     <div class="diagram-legend">
@@ -557,7 +546,7 @@
       <div class="legend-item"><div class="ldot" style="background:#4858c0;">F</div><div><div class="lname">Salvia ×2</div><div class="lsub">Caradonna — middle</div></div></div>
       <div class="legend-item"><div class="ldot" style="background:#e8d820;">G</div><div><div class="lname">Yarrow ×3</div><div class="lsub">Moonshine — middle contrast</div></div></div>
       <div class="legend-item"><div class="ldot" style="background:#b060a0;">H</div><div><div class="lname">Allium 'Millenium' ×2</div><div class="lsub">Middle — deer deterrent globes</div></div></div>
-      <div class="legend-item"><div class="ldot" style="background:#d068b8;">I</div><div><div class="lname">Creeping Phlox ×8</div><div class="lsub">Full curb sweep + row 2 edges — spring bloom</div></div></div>
+      <div class="legend-item"><div class="ldot" style="background:#d068b8;">I</div><div><div class="lname">Creeping Phlox ×6</div><div class="lsub">Row 3 sweep + row 2 edges — spring bloom</div></div></div>
       <div class="legend-item"><div class="ldot" style="background:#c0d030;">J</div><div><div class="lname">Sedum 'Angelina' ×3</div><div class="lsub">Front mid-row — year-round gold foliage</div></div></div>
       <div class="legend-item"><div class="ldot" style="background:#e05018;">K</div><div><div class="lname">Gaillardia 'Goblin' ×2</div><div class="lsub">Front row — long bloom orange-red</div></div></div>
       <div class="legend-item"><div class="ldot" style="background:#8c2828;">L</div><div><div class="lname">Husker Red Penstemon ×2</div><div class="lsub">Back rows — burgundy foliage</div></div></div>
@@ -574,13 +563,13 @@
 
   <!-- ===== BUDGET ===== -->
   <section class="budget-section">
-    <h2 class="section-title">Budget Overview — 44 Plants Total</h2>
+    <h2 class="section-title">Budget Overview — 42 Plants Total</h2>
     <div class="budget-tiers">
 
       <div class="budget-card tier-budget">
         <div class="budget-header">
           <h3>Budget</h3>
-          <div class="btotal">~$422 CAD</div>
+          <div class="btotal">~$410 CAD</div>
           <div class="bnote">Plug / starter pots · fills in over 2 seasons</div>
         </div>
         <div class="budget-body">
@@ -593,7 +582,7 @@
             <tr><td>Salvia ×2</td><td class="bcolor"><span class="cswatch" style="background:#5060b8"></span>Blue-purple</td><td class="bprice">$24</td></tr>
             <tr><td>Yarrow ×3</td><td class="bcolor"><span class="cswatch" style="background:#f5c030"></span>Yellow</td><td class="bprice">$27</td></tr>
             <tr><td>Allium ×2</td><td class="bcolor"><span class="cswatch" style="background:#8040a0"></span>Purple</td><td class="bprice">$24</td></tr>
-            <tr><td>Creeping Phlox ×8</td><td class="bcolor"><span class="cswatch" style="background:#c060b0"></span>Pink or purple</td><td class="bprice">$48</td></tr>
+            <tr><td>Creeping Phlox ×6</td><td class="bcolor"><span class="cswatch" style="background:#c060b0"></span>Pink or purple</td><td class="bprice">$36</td></tr>
             <tr><td>Sedum 'Angelina' ×3</td><td class="bcolor"><span class="cswatch" style="background:#b8c820"></span>Gold foliage</td><td class="bprice">$21</td></tr>
             <tr><td>Gaillardia ×2</td><td class="bcolor"><span class="cswatch" style="background:#d84820"></span>Red-orange</td><td class="bprice">$12</td></tr>
             <tr><td>Husker Red Penstemon ×2</td><td class="bcolor"><span class="cswatch" style="background:#8c2828"></span>Burgundy foliage</td><td class="bprice">$18</td></tr>
@@ -602,7 +591,7 @@
             <tr><td>Agastache ×2</td><td class="bcolor"><span class="cswatch" style="background:#5060c0"></span>Blue-purple</td><td class="bprice">$24</td></tr>
             <tr><td>Helenium ×2</td><td class="bcolor"><span class="cswatch" style="background:#e09020"></span>Yellow-orange</td><td class="bprice">$14</td></tr>
             <tr><td>Dianthus ×4</td><td class="bcolor"><span class="cswatch" style="background:#e05090"></span>Pink</td><td class="bprice">$28</td></tr>
-            <tr class="btotal-row"><td>Total</td><td></td><td class="bprice">$422</td></tr>
+            <tr class="btotal-row"><td>Total</td><td></td><td class="bprice">$410</td></tr>
           </table>
         </div>
       </div>
@@ -610,7 +599,7 @@
       <div class="budget-card tier-mid">
         <div class="budget-header">
           <h3>Mid</h3>
-          <div class="btotal">~$709 CAD</div>
+          <div class="btotal">~$689 CAD</div>
           <div class="bnote">1 gal standard pots · good first-season presence</div>
         </div>
         <div class="budget-body">
@@ -623,7 +612,7 @@
             <tr><td>Salvia ×2</td><td class="bcolor"><span class="cswatch" style="background:#5060b8"></span>Blue-purple</td><td class="bprice">$40</td></tr>
             <tr><td>Yarrow ×3</td><td class="bcolor"><span class="cswatch" style="background:#f5c030"></span>Yellow</td><td class="bprice">$54</td></tr>
             <tr><td>Allium ×2</td><td class="bcolor"><span class="cswatch" style="background:#8040a0"></span>Purple</td><td class="bprice">$40</td></tr>
-            <tr><td>Creeping Phlox ×8</td><td class="bcolor"><span class="cswatch" style="background:#c060b0"></span>Pink or purple</td><td class="bprice">$80</td></tr>
+            <tr><td>Creeping Phlox ×6</td><td class="bcolor"><span class="cswatch" style="background:#c060b0"></span>Pink or purple</td><td class="bprice">$60</td></tr>
             <tr><td>Sedum 'Angelina' ×3</td><td class="bcolor"><span class="cswatch" style="background:#b8c820"></span>Gold foliage</td><td class="bprice">$39</td></tr>
             <tr><td>Gaillardia ×2</td><td class="bcolor"><span class="cswatch" style="background:#d84820"></span>Red-orange</td><td class="bprice">$20</td></tr>
             <tr><td>Husker Red Penstemon ×2</td><td class="bcolor"><span class="cswatch" style="background:#8c2828"></span>Burgundy foliage</td><td class="bprice">$30</td></tr>
@@ -632,7 +621,7 @@
             <tr><td>Agastache ×2</td><td class="bcolor"><span class="cswatch" style="background:#5060c0"></span>Blue-purple</td><td class="bprice">$40</td></tr>
             <tr><td>Helenium ×2</td><td class="bcolor"><span class="cswatch" style="background:#e09020"></span>Yellow-orange</td><td class="bprice">$24</td></tr>
             <tr><td>Dianthus ×4</td><td class="bcolor"><span class="cswatch" style="background:#e05090"></span>Pink</td><td class="bprice">$48</td></tr>
-            <tr class="btotal-row"><td>Total</td><td></td><td class="bprice">$709</td></tr>
+            <tr class="btotal-row"><td>Total</td><td></td><td class="bprice">$689</td></tr>
           </table>
         </div>
       </div>
@@ -640,7 +629,7 @@
       <div class="budget-card tier-premium">
         <div class="budget-header">
           <h3>Premium</h3>
-          <div class="btotal">~$1,063 CAD</div>
+          <div class="btotal">~$1,033 CAD</div>
           <div class="bnote">2 gal pots · full coverage from year one</div>
         </div>
         <div class="budget-body">
@@ -653,7 +642,7 @@
             <tr><td>Salvia ×2</td><td class="bcolor"><span class="cswatch" style="background:#5060b8"></span>Blue-purple</td><td class="bprice">$56</td></tr>
             <tr><td>Yarrow ×3</td><td class="bcolor"><span class="cswatch" style="background:#f5c030"></span>Yellow</td><td class="bprice">$75</td></tr>
             <tr><td>Allium ×2</td><td class="bcolor"><span class="cswatch" style="background:#8040a0"></span>Purple</td><td class="bprice">$60</td></tr>
-            <tr><td>Creeping Phlox ×8</td><td class="bcolor"><span class="cswatch" style="background:#c060b0"></span>Pink or purple</td><td class="bprice">$120</td></tr>
+            <tr><td>Creeping Phlox ×6</td><td class="bcolor"><span class="cswatch" style="background:#c060b0"></span>Pink or purple</td><td class="bprice">$90</td></tr>
             <tr><td>Sedum 'Angelina' ×3</td><td class="bcolor"><span class="cswatch" style="background:#b8c820"></span>Gold foliage</td><td class="bprice">$60</td></tr>
             <tr><td>Gaillardia ×2</td><td class="bcolor"><span class="cswatch" style="background:#d84820"></span>Red-orange</td><td class="bprice">$36</td></tr>
             <tr><td>Husker Red Penstemon ×2</td><td class="bcolor"><span class="cswatch" style="background:#8c2828"></span>Burgundy foliage</td><td class="bprice">$50</td></tr>
@@ -662,7 +651,7 @@
             <tr><td>Agastache ×2</td><td class="bcolor"><span class="cswatch" style="background:#5060c0"></span>Blue-purple</td><td class="bprice">$60</td></tr>
             <tr><td>Helenium ×2</td><td class="bcolor"><span class="cswatch" style="background:#e09020"></span>Yellow-orange</td><td class="bprice">$40</td></tr>
             <tr><td>Dianthus ×4</td><td class="bcolor"><span class="cswatch" style="background:#e05090"></span>Pink</td><td class="bprice">$80</td></tr>
-            <tr class="btotal-row"><td>Total</td><td></td><td class="bprice">$1,063</td></tr>
+            <tr class="btotal-row"><td>Total</td><td></td><td class="bprice">$1,033</td></tr>
           </table>
         </div>
       </div>
